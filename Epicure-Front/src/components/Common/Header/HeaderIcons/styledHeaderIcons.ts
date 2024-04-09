@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { screenSizes } from "../../../SharedStyles/constants";
+import { screenSizes } from "../../../Shared/constants";
 
 export const StyledHeaderIconsContainer = styled.nav`
   margin-right: 20px;

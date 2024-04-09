@@ -7,11 +7,17 @@ import {
   StyledTopNavBarBorder,
   StyledBottomNavBarBorder,
   ClosedHamburgerLinkButton,
+  StyledBigScreenNavBar,
   NavBarLink,
+  StyledEpicureLogoTitle,
 } from "./styledNavBar";
+import LogoSVG from "../../../Icons/LogoSVG";
+import HamburgerSVG from "../../../Icons/HamburgerSVG";
 
 const NavBar = () => {
   const [extendNavBar, setExtendNavBar] = useState(false);
+
+  const title = "EPICURE";
 
   return (
     <>
@@ -57,7 +63,11 @@ const NavBar = () => {
         </>
       ) : (
         <>
-          // i fscreen is more than 600px put LogoSVG
+          <StyledBigScreenNavBar extendNavBar={extendNavBar}>
+            <HamburgerSVG />
+          </StyledBigScreenNavBar>
+          <LogoSVG></LogoSVG>
+          <StyledEpicureLogoTitle>{title}</StyledEpicureLogoTitle>
           <NavBarLink to={"/Restaurants"}>Restaurants</NavBarLink>
           <NavBarLink to={"/Chefs"}>Chefs</NavBarLink>
         </>
