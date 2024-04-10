@@ -6,7 +6,7 @@ import {
   colors,
   screenSizes,
   letterSpacing,
-} from "../../../SharedStyles/constants";
+} from "../../../Shared/constants";
 
 interface NavBarProps {
   extendNavBar: boolean;
@@ -42,13 +42,10 @@ export const OpenHamburgerLinksButton = styled.button`
   margin-left: 15px;
   padding-bottom: 0px;
   font-size: ${fontSizes.large};
+  display: block;
 
-  @media (max-width: 600px) {
-    display: block; /* Show the button for screens 600px or narrower */
-  }
-
-  @media (min-width: 601px) {
-    display: none; /* Hide the button for screens wider than 600px */
+  @media (min-width: ${screenSizes.medium}) {
+    display: none;
   }
 `;
 
@@ -105,6 +102,33 @@ export const ClosedHamburgerLinkButton = styled.button`
   padding-bottom: 0px;
 
   @media (min-width: ${screenSizes.medium}) {
+    display: none;
+  }
+`;
+
+export const StyledBigScreenNavBar = styled.div<NavBarProps>`
+  @media (min-width: ${screenSizes.medium}) {
+    display: none;
+  }
+
+  @media (min-width: ${screenSizes.large}) {
+    background-color: red;
+  }
+`;
+
+export const StyledContainerLogoNavBar = styled.div`
+  @media (max-width: ${screenSizes.medium}) {
+    display: none;
+  }
+`;
+
+export const StyledEpicureLogoTitle = styled.div`
+  font-size: ${fontSizes.large};
+  font-weight: 300;
+  letter-spacing: ${letterSpacing.small};
+  margin-right: 15px;
+  margin-left: 10px;
+  @media (max-width: ${screenSizes.medium}) {
     display: none;
   }
 `;

@@ -1,8 +1,11 @@
 export const fontSizes: Record<string, string> = {
   small: "12px",
   medium: "14px",
+  medium16: "16px",
+  medium18: "18px",
   large: "20px",
   xlLarge: "24px",
+  big: "30px",
   xlxLarge: "32px",
 };
 
@@ -28,4 +31,13 @@ export const letterSpacing: Record<string, string> = {
   small: "1.25px",
   medium: "1.5px",
   large: "2px",
+};
+
+export const breakPointsSwiper: Record<string, string> = {
+  breakPointMobile: "375px",
+  breakPointSmall: "475px",
+  breakPointMedium: "600px",
+  breakPointRegular: "650px",
+  breakPointBig: "725px",
+  BreakPointLarge: "900px",
 };

@@ -3,7 +3,7 @@ import {
   backgroundColors,
   fontSizes,
   screenSizes,
-} from "../../SharedStyles/constants";
+} from "../../Shared/constants";
 
 export const StyledHeaderContainer = styled.header`
   display: flex;
@@ -19,13 +19,16 @@ export const StyledHeaderContainer = styled.header`
   }
 
   @media screen and (min-width: ${screenSizes.large}) {
-    background-color: green;
   }
 `;
 
 export const StyledHeaderLogo = styled.span`
   margin: 0px;
   font-size: ${fontSizes.small};
+
+  @media (min-width: ${screenSizes.medium}) {
+    display: none;
+  }
 `;
 
 export const StyledHeaderEpicureLogo = styled.img`

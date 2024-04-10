@@ -1,9 +1,8 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { fontSizes, screenSizes } from "../../SharedStyles/constants";
+import { fontSizes, screenSizes } from "../../Shared/constants";
 
 export const StyledFooterContainer = styled.footer`
-  position: fixed;
   bottom: 0;
   margin-top: auto;
   background-color: white;
