@@ -42,12 +42,9 @@ export const OpenHamburgerLinksButton = styled.button`
   margin-left: 15px;
   padding-bottom: 0px;
   font-size: ${fontSizes.large};
+  display: block;
 
-  @media (max-width: 600px) {
-    display: block;
-  }
-
-  @media (min-width: 601px) {
+  @media (min-width: ${screenSizes.medium}) {
     display: none;
   }
 `;
