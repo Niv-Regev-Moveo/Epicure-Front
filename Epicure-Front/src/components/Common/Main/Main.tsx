@@ -1,6 +1,6 @@
 // import CardRestaurant from "./CardRestaurant";
 import RestaurantsSection from "./Sections/RestaurantsSection";
-import SearchBar from "./SearchBar";
+import SearchBar from "./Sections/SearchBar";
 import { StyledMainPageContainer } from "./styledMain";
 import ChefSection from "./Sections/ChefsSection";
 import DishesSection from "./Sections/DishesSection";

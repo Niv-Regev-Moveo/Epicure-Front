@@ -7,7 +7,7 @@ import {
   StyledSearchBarContainer,
   StyledDescriptionAndSearchContainer,
 } from "./styledSearchBar";
-import Hero from "../../../Photos/Hero.png";
+import Hero from "../../../../Photos/Hero.png";
 
 const SearchBar = () => {
   const description = "Epicure works with the top chef restaurants in Tel Aviv";

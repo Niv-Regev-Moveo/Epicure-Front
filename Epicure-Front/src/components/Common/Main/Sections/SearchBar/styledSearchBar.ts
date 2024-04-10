@@ -4,7 +4,7 @@ import {
   fontSizes,
   letterSpacing,
   screenSizes,
-} from "../../../Shared/constants";
+} from "../../../../Shared/constants";
 
 export const StyledSearchImg = styled.img`
   width: 100%;
