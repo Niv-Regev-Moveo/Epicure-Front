@@ -1,9 +1,5 @@
 import styled from "styled-components";
-import {
-  backgroundColors,
-  fontSizes,
-  screenSizes,
-} from "../../../../Shared/constants";
+import { fontSizes, screenSizes } from "../../../../Shared/constants";
 
 export const StyledCardRestaurantContainer = styled.div`
   width: 245px;
@@ -12,20 +8,6 @@ export const StyledCardRestaurantContainer = styled.div`
   @media (min-width: ${screenSizes.medium}) {
     margin-left: 20px;
   }
-`;
-
-export const StyledCardRestaurantImgContainer = styled.div``;
-
-export const StyledCardRestaurantNameChef = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: ${backgroundColors.cards};
-  height: 81px;
-`;
-
-export const StyledCardRestaurantImg = styled.img`
-  height: 151.8px;
 `;
 
 export const StyledRestaurantName = styled.h3`

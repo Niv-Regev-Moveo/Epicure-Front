@@ -1,15 +1,19 @@
 import TitleArrow from "../../Common/TitleArrow";
 import SwiperEpicure from "../../Common/SwiperEpicure";
 import SectionsTitle from "../../Common/SectionsTitle";
-import { StyledContainerSwipers } from "../../Common/SwiperEpicure/styles";
+import Card from "../../Common/Card";
+import claro from "../../../assets/Photos/claro.png";
+import { StyledChefSectionContainer } from "./styles";
 
 const ChefSection = () => {
   return (
-    <StyledContainerSwipers>
+    <StyledChefSectionContainer>
       <SectionsTitle title="YOSSI'S RESTAURANTS " />
-      <SwiperEpicure />
+      <SwiperEpicure
+        card={<Card image={claro} title={"Restaurant name from data"} />}
+      />
       <TitleArrow />
-    </StyledContainerSwipers>
+    </StyledChefSectionContainer>
   );
 };
 

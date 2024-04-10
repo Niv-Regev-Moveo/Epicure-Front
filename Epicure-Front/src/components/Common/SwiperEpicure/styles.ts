@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Swiper } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { screenSizes } from "../../../Shared/constants";
 
 export const StyledSwiper = styled(Swiper)`
@@ -21,4 +21,19 @@ export const StyledContainerSwipers = styled.div`
     align-items: center;
     margin-left: 0px;
   }
+`;
+
+export const StyledDisplayCardsContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  @media (min-width: ${screenSizes.large}) {
+    width: 840px;
+  }
+`;
+
+export const StyledSwiperSlide = styled(SwiperSlide)`
+  max-width: 280px;
 `;
