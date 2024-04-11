@@ -1,3 +1,3 @@
-import CardChef from "./CardChef";
+import CardChef from "../CardChefOfTheWeek";
 
 export default CardChef;

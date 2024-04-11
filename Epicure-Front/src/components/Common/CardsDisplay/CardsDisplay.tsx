@@ -1,24 +1,16 @@
-import CardRestaurant from "../../Sections/RestaurantsSection/CardRestaurant";
+import Card from "../Card/Card";
 import { CardsDisplayContainer } from "./styles";
+
+// interface CardsDisplayProps {
+//   card: JSX.Element;
+// }
 
 const CardsDisplay = () => {
   return (
     <CardsDisplayContainer>
-      <CardRestaurant
-        restaurantImg="hello"
-        restaurantName="claro"
-        chefName="Dan Dan"
-      ></CardRestaurant>
-      <CardRestaurant
-        restaurantImg="hello"
-        restaurantName="claro"
-        chefName="Dan Dan"
-      ></CardRestaurant>
-      <CardRestaurant
-        restaurantImg="hello"
-        restaurantName="claro"
-        chefName="Dan Dan"
-      ></CardRestaurant>
+      <Card title={"hello"} image={""} />
+      <Card title={""} image={""} />
+      <Card title={""} image={""} />
     </CardsDisplayContainer>
   );
 };

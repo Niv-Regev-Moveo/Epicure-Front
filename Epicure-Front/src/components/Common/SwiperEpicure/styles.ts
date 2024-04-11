@@ -22,7 +22,3 @@ export const StyledContainerSwipers = styled.div`
     margin-left: 0px;
   }
 `;
-
-export const StyledDisplayCardsContainer = styled.div``;
-
-export const StyledSwiperSlide = styled(SwiperSlide)``;

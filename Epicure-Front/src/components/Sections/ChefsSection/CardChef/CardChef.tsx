@@ -1,27 +1,8 @@
-import {
-  StyledCardRestaurantImg,
-  StyledCardRestaurantImgContainer,
-  StyledChefName,
-  StyledCardRestaurantNameChef,
-  StyledCardRestaurantContainer,
-} from "./styles";
+import React from "react";
+import { StyledCardChefContainer } from "./styles";
 
-interface CardChefProps {
-  chefName?: string;
-  restaurantImg?: string;
-}
-
-const CardChef = ({ chefName, restaurantImg }: CardChefProps) => {
-  return (
-    <StyledCardRestaurantContainer>
-      <StyledCardRestaurantImgContainer>
-        <StyledCardRestaurantImg src={restaurantImg} alt="" />
-      </StyledCardRestaurantImgContainer>
-      <StyledCardRestaurantNameChef>
-        <StyledChefName>{chefName}</StyledChefName>
-      </StyledCardRestaurantNameChef>
-    </StyledCardRestaurantContainer>
-  );
+const CardChef = () => {
+  return <StyledCardChefContainer></StyledCardChefContainer>;
 };
 
 export default CardChef;
