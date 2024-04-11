@@ -22,3 +22,18 @@ export const StyledContainerSwipers = styled.div`
     margin-left: 0px;
   }
 `;
+
+export const StyledDisplayCardsContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  @media (min-width: ${screenSizes.large}) {
+    width: 840px;
+  }
+`;
+
+export const StyledSwiperSlide = styled(SwiperSlide)`
+  max-width: 280px;
+`;
