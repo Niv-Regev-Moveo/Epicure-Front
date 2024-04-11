@@ -24,6 +24,16 @@ export const StyledAboutUsSectionContainer = styled.div`
     align-items: center;
     justify-content: space-between;
     padding-top: 0;
+    position: relative;
+    min-height: 600px;
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+
+  @media (min-width: ${screenSizes.large}) {
+    padding-right: 8%;
+    height: 500px;
+    min-height: 500px;
   }
 `;
 
@@ -37,11 +47,41 @@ export const StyledButtonsContainer = styled.div`
   @media (min-width: ${screenSizes.small}) {
     align-items: center;
   }
+  @media (min-width: ${screenSizes.medium}) {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    width: 380px;
+    height: 55px;
+    margin-top: 0px;
+    top: 85%;
+    left: 8%;
+  }
+  @media (min-width: ${screenSizes.large}) {
+    top: 85%;
+    left: 10%;
+  }
+`;
+
+export const StyledTitleAndDescriptionContainer = styled.div`
+  @media (min-width: ${screenSizes.medium}) {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 10%;
+    bottom: 20%;
+    margin-top: 0px;
+
+    @media (min-width: ${screenSizes.large}) {
+      right: 40%;
+    }
+  }
 `;
 
 export const StyledDescription = styled.p`
   font-weight: 200;
   font-size: ${fontSizes.medium18};
+  max-width: 570px;
 
   @media (min-width: ${screenSizes.small}) {
     text-align: center;
@@ -50,6 +90,12 @@ export const StyledDescription = styled.p`
 
   @media (min-width: ${screenSizes.medium}) {
     text-align: start;
+    width: 380px;
+  }
+
+  @media (min-width: ${screenSizes.large}) {
+    text-align: start;
+    width: 500px;
   }
 `;
 
@@ -71,19 +117,10 @@ export const StyledLogoTitle = styled.div`
   }
 `;
 
-export const StyledButtonsAndDescriptionWrapper = styled.div`
-  order: 1;
-
-  @media (min-width: ${screenSizes.medium}) {
-    order: 2;
-    margin-right: auto;
-  }
-`;
-
 export const StyledSectionsTitle = styled.h3`
   font-size: ${fontSizes.medium18};
   font-weight: 200;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   margin-top: 30px;
   letter-spacing: ${letterSpacing.small};
 
@@ -95,5 +132,17 @@ export const StyledSectionsTitle = styled.h3`
   @media (min-width: ${screenSizes.medium}) {
     font-size: ${fontSizes.big};
     text-align: start;
+  }
+`;
+export const StyledLogoContainer = styled.div`
+  @media (min-width: ${screenSizes.medium}) {
+    position: relative;
+    top: -20px;
+    left: 85%;
+  }
+
+  @media (min-width: ${screenSizes.large}) {
+    top: 0px;
+    right: 10%;
   }
 `;

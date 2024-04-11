@@ -1,17 +1,19 @@
 import {
   StyledChefName,
   StyledCardRestaurantContainer,
+  StyledStarsImage,
 } from "./styledCardRestaurant";
 
-// interface CardRestaurantProps {
-//   chefName?: string;
-// }
-// { chefName }: CardRestaurantProps
-const CardRestaurant = () => {
-  const chefName = "chef name from data";
+interface CardRestaurantProps {
+  chefName: string;
+  starsImage: string;
+}
+
+const CardRestaurant = ({ chefName, starsImage }: CardRestaurantProps) => {
   return (
     <StyledCardRestaurantContainer>
       <StyledChefName>{chefName}</StyledChefName>
+      <StyledStarsImage src={starsImage} />
     </StyledCardRestaurantContainer>
   );
 };

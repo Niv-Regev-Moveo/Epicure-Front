@@ -14,8 +14,6 @@ export const StyledCardContainer = styled.div`
   }
 `;
 
-export const StyledCardImgContainer = styled.div``;
-
 export const StyledCardNameChef = styled.div`
   display: flex;
   flex-direction: column;
@@ -35,17 +33,17 @@ export const StyledName = styled.h3`
   padding-left: 20px;
   margin: 0;
   padding-bottom: 5px;
-`;
+  padding-top: 10px;
 
-export const StyledChefName = styled.h5`
-  font-size: ${fontSizes.medium16};
-  font-weight: 200;
-  padding-left: 20px;
-  margin: 0;
-  padding-top: 5px;
+  @media (min-width: ${screenSizes.medium}) {
+    text-align: center;
+    padding-left: 0px;
+  }
 `;
 
 export const StyledBottomComponent = styled.div`
   display: flex;
   flex-direction: column;
 `;
+
+export const StyledCardImgContainer = styled.div``;

@@ -1,5 +1,3 @@
-import React from "react";
-
 const GooglePlaySVG = () => {
   return (
     <div>
@@ -17,12 +15,12 @@ const GooglePlaySVG = () => {
           height="51.5"
           rx="9.75"
           stroke="black"
-          stroke-width="0.5"
+          strokeWidth="0.5"
         />
-        <g clip-path="url(#clip0_126_5522)">
+        <g clipPath="url(#clip0_126_5522)">
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M30.147 24.3262L15.033 13.8402C13.743 12.9462 12 13.9202 12 15.5262V36.4702C12 38.1032 13.744 39.0522 15.033 38.1562L30.147 27.6702C31.284 26.9062 31.284 25.1162 30.147 24.3262Z"
             fill="black"
           />

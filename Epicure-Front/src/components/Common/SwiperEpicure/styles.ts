@@ -18,7 +18,10 @@ export const StyledContainerSwipers = styled.div`
   margin-top: 20px;
 
   @media (min-width: ${screenSizes.medium}) {
-    align-items: center;
+    margin-left: 40px;
+  }
+
+  @media (min-width: ${screenSizes.large}) {
     margin-left: 0px;
   }
 `;
@@ -30,10 +33,16 @@ export const StyledDisplayCardsContainer = styled.div`
   justify-content: space-around;
 
   @media (min-width: ${screenSizes.large}) {
-    width: 840px;
+    width: 850px;
+    justify-content: center;
+    margin: auto;
   }
 `;
 
 export const StyledSwiperSlide = styled(SwiperSlide)`
-  max-width: 280px;
+  width: 240px;
+
+  @media (min-width: ${screenSizes.large}) {
+    width: 250px;
+  }
 `;

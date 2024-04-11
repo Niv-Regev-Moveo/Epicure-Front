@@ -34,6 +34,9 @@ export const letterSpacing: Record<string, string> = {
 };
 
 export const breakPointsSwiper: Record<string, string> = {
+  extraExtraSmallBreakPoint: "300px",
+  extraSmallBreakPoint: "320px",
+  tinyBreakPoint: "350px",
   breakPointMobile: "375px",
   breakPointSmall: "475px",
   breakPointMedium: "600px",

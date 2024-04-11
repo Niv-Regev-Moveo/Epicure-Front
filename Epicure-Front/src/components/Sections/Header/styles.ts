@@ -12,13 +12,10 @@ export const StyledHeaderContainer = styled.header`
   width: 100%;
   background-color: ${backgroundColors.primary};
   position: sticky;
-  height: 64px;
+  height: 46px;
 
-  @media screen and (max-width: ${screenSizes.medium}) {
-    height: 46px;
-  }
-
-  @media screen and (min-width: ${screenSizes.large}) {
+  @media (min-width: ${screenSizes.medium}) {
+    height: 64px;
   }
 `;
 
@@ -42,12 +39,23 @@ export const StyledLeftContainer = styled.div`
   display: flex;
   align-items: center;
   padding-left: 2%;
+
+  @media (min-width: ${screenSizes.medium}) {
+    padding-left: 5%;
+  }
+  @media (min-width: ${screenSizes.medium}) {
+    padding-left: 7%;
+  }
 `;
 
 export const StyledRightContainer = styled.div`
   flex: 40%;
   display: flex;
   justify-content: flex-end;
+
+  @media (min-width: ${screenSizes.medium}) {
+    padding-right: 5%;
+  }
 `;
 
 export const StyledCenterContainer = styled.div`

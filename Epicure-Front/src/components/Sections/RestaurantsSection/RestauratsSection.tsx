@@ -15,7 +15,9 @@ const RestaurantsSection = () => {
           <Card
             image={claro}
             title={"Restaurant name from data"}
-            bottomComponent={<CardRestaurant />}
+            bottomComponent={
+              <CardRestaurant starsImage={""} chefName={"chef name"} />
+            }
           />
         }
       />
