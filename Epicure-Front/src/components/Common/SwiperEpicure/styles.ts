@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Swiper } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { screenSizes } from "../../../Shared/constants";
 
 export const StyledSwiper = styled(Swiper)`
@@ -22,3 +22,7 @@ export const StyledContainerSwipers = styled.div`
     margin-left: 0px;
   }
 `;
+
+export const StyledDisplayCardsContainer = styled.div``;
+
+export const StyledSwiperSlide = styled(SwiperSlide)``;

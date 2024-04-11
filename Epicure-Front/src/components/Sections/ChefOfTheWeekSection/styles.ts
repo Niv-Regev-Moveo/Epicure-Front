@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { screenSizes } from "../../../Shared/constants";
+import { fontSizes, screenSizes } from "../../../Shared/constants";
 
 export const StyledCOTWSectionContainer = styled.div`
   display: flex;
@@ -58,8 +58,11 @@ export const StyledChefNameTitle = styled.h3`
   bottom: 0;
   width: 100%;
   max-height: 51px;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.7);
   padding: 8px;
+  text-align: center;
+  font-size: ${fontSizes.medium18};
+  font-weight: 400;
 
   box-sizing: border-box;
   margin: 0;

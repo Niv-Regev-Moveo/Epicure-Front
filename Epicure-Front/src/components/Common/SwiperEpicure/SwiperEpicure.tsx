@@ -1,18 +1,26 @@
 import "swiper/css";
 import { SwiperSlide } from "swiper/react";
-import CardRestaurant from "../../Sections/RestaurantsSection/CardRestaurant";
-import claro from "../../../assets/Photos/claro.png";
-import { StyledSwiper } from "./styles";
+import {
+  StyledDisplayCardsContainer,
+  StyledSwiper,
+  StyledSwiperSlide,
+} from "./styles";
 import { useEffect, useState } from "react";
 import { breakPointsSwiper } from "../../../Shared/constants";
-import CardsDisplay from "../CardsDisplay";
 
-const SwiperEpicure = () => {
+interface CardProps {
+  card: JSX.Element;
+}
+
+const SwiperEpicure = ({ card }: CardProps) => {
   const [slidersPerView, setSlidersPerView] = useState<number>(1);
-  const [showSwiper, setShowSwiper] = useState<boolean>(true); // State to toggle between Swiper and CardsDisplayContainer
+  const [showSwiper, setShowSwiper] = useState<boolean>(true);
+  const [allowSwipe, setAllowSwipe] = useState<boolean>(true);
 
   useEffect(() => {
     const updateSlidersPerView = () => {
+      setAllowSwipe(window.innerWidth < 900);
+
       const mobileWidth = parseInt(breakPointsSwiper.breakPointMobile);
       const smallWidth = parseInt(breakPointsSwiper.breakPointSmall);
       const mediumWidth = parseInt(breakPointsSwiper.breakPointMedium);
@@ -45,47 +53,28 @@ const SwiperEpicure = () => {
     };
   }, []);
 
-  return showSwiper ? (
-    <StyledSwiper
-      spaceBetween={50}
-      slidesPerView={slidersPerView}
-      onSlideChange={() => console.log("slide change")}
-      onSwiper={(swiper) => console.log(swiper)}
-    >
-      <SwiperSlide>
-        <CardRestaurant
-          restaurantName="ali"
-          chefName="baba"
-          restaurantImg={claro}
-        />
-      </SwiperSlide>
-      <SwiperSlide>
-        {" "}
-        <CardRestaurant
-          restaurantName="ali"
-          chefName="baba"
-          restaurantImg={claro}
-        />
-      </SwiperSlide>
-      <SwiperSlide>
-        {" "}
-        <CardRestaurant
-          restaurantName="ali"
-          chefName="baba"
-          restaurantImg={claro}
-        />
-      </SwiperSlide>
-      <SwiperSlide>
-        {" "}
-        <CardRestaurant
-          restaurantName="ali"
-          chefName="baba"
-          restaurantImg={claro}
-        />
-      </SwiperSlide>
-    </StyledSwiper>
-  ) : (
-    <CardsDisplay />
+  return (
+    <>
+      {showSwiper ? (
+        <StyledSwiper
+          spaceBetween={50}
+          slidesPerView={slidersPerView}
+          navigation
+        >
+          <SwiperSlide>{card}</SwiperSlide>
+          <SwiperSlide>{card}</SwiperSlide>
+          <SwiperSlide>{card}</SwiperSlide>
+          <SwiperSlide>{card}</SwiperSlide>
+          <SwiperSlide>{card}</SwiperSlide>
+        </StyledSwiper>
+      ) : (
+        <StyledDisplayCardsContainer>
+          <StyledSwiperSlide>{card}</StyledSwiperSlide>
+          <StyledSwiperSlide>{card}</StyledSwiperSlide>
+          <StyledSwiperSlide>{card}</StyledSwiperSlide>
+        </StyledDisplayCardsContainer>
+      )}
+    </>
   );
 };
 
