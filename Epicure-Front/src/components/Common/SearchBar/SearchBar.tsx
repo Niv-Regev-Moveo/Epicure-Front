@@ -2,16 +2,19 @@ import {
   StyledSearchImg,
   StyledSearchBarImageContainer,
   StyledDescriptionForSearchBar,
-  StyledInputSearchBar,
+  StyledSearchBarInputContainer,
   StyledSpanSearchIcon,
   StyledSearchBarContainer,
   StyledDescriptionAndSearchContainer,
+  StyledSearchBarInput,
+  StyledSearchBarButton,
+  StylesSearchImage,
 } from "./styles";
 import Hero from "../../../assets/Photos/Hero.png";
+import Search from "../../../assets/Photos/Search.png";
 
 const SearchBar = () => {
   const description = "Epicure works with the top chef restaurants in Tel Aviv";
-  const searchIcon = "\u{1F50D}";
 
   return (
     <StyledSearchBarImageContainer>
@@ -21,11 +24,16 @@ const SearchBar = () => {
           <StyledDescriptionForSearchBar>
             {description}
           </StyledDescriptionForSearchBar>
-          <StyledInputSearchBar
-            type="text"
-            placeholder={`${searchIcon}   Search for restaurants cuisine, chef`}
-          />
-          <StyledSpanSearchIcon></StyledSpanSearchIcon>
+          <StyledSearchBarInputContainer>
+            <StyledSearchBarButton>
+              <StylesSearchImage src={Search} alt="search" />
+            </StyledSearchBarButton>
+            <StyledSearchBarInput
+              type="text"
+              placeholder="Search for restaurants cuisine , chef"
+            />
+          </StyledSearchBarInputContainer>
+          <StyledSpanSearchIcon />
         </StyledSearchBarContainer>
       </StyledDescriptionAndSearchContainer>
     </StyledSearchBarImageContainer>

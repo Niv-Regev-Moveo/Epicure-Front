@@ -1,3 +1,3 @@
-import TitleArrow from "./styles";
+import TitleArrow from "./TitleArrow";
 
 export default TitleArrow;

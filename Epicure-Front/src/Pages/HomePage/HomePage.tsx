@@ -22,7 +22,7 @@ const HomePage = () => {
         }
       />
       <ChefSection />
-      <AboutSection />
+      <AboutSection description={""} />
     </StyledMainPageContainer>
   );
 };

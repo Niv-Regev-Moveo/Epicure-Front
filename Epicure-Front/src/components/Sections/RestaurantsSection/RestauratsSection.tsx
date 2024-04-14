@@ -9,7 +9,7 @@ import claro from "../../../assets/Photos/claro.png";
 const RestaurantsSection = () => {
   return (
     <StyledContainerSwipers>
-      <SectionsTitle title="POPULAR RESTAURANTS IN EPICURE" />
+      <SectionsTitle title="POPULAR RESTAURANTS IN EPICURE:" />
       <SwiperEpicure
         card={
           <Card

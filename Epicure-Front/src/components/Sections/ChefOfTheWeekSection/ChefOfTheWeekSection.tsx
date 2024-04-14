@@ -5,6 +5,7 @@ import {
   StyledChefNameTitle,
   StyledImageTitleContainer,
   StyledCOTWSectionContainer,
+  StyledDescriptionContainer,
 } from "./styles";
 import ChefImage from "../../../assets/Photos/ChefImage.png";
 import SectionsTitle from "../../Common/SectionsTitle";
@@ -20,12 +21,15 @@ const ChefOfTheWeekSection = ({ title, text }: ChefOfTheWeekSectionProps) => {
     <>
       <StyledCOTWSectionContainer>
         <SectionsTitle title="CHEF OF THE WEEK:" />
+
         <StyledCOTWContainer>
           <StyledImageTitleContainer>
             <StyledChefImg src={ChefImage} alt={title} />
             <StyledChefNameTitle>{title}</StyledChefNameTitle>
           </StyledImageTitleContainer>
-          <ChefDescription>{text}</ChefDescription>
+          <StyledDescriptionContainer>
+            <ChefDescription>{text}</ChefDescription>
+          </StyledDescriptionContainer>
         </StyledCOTWContainer>
       </StyledCOTWSectionContainer>
     </>

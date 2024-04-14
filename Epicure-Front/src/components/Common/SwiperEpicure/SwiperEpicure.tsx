@@ -16,7 +16,6 @@ const SwiperEpicure = ({ card }: CardProps) => {
   const [slidersPerView, setSlidersPerView] = useState<number>(1);
   const [showSwiper, setShowSwiper] = useState<boolean>(true);
   const [allowSwipe, setAllowSwipe] = useState<boolean>(true);
-  const [centerSlides, setCenterSlides] = useState<boolean>(false);
 
   useEffect(() => {
     const updateSlidersPerView = () => {
@@ -36,7 +35,6 @@ const SwiperEpicure = ({ card }: CardProps) => {
 
       if (window.innerWidth >= largeWidth) {
         setSlidersPerView(3);
-        setCenterSlides(true);
       } else if (window.innerWidth >= bigWidth) {
         setSlidersPerView(2.7);
       } else if (window.innerWidth >= regularWidth) {

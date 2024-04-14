@@ -1,9 +1,14 @@
-const SpicySVG = () => {
+interface SpicyProps {
+  width: string;
+  height: string;
+}
+
+const SpicySVG = ({ width, height }: SpicyProps) => {
   return (
     <div>
       <svg
-        width="60"
-        height="61"
+        width={width}
+        height={height}
         viewBox="0 0 78 61"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

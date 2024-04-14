@@ -4,10 +4,6 @@ import { screenSizes } from "../../../Shared/constants";
 
 export const StyledSwiper = styled(Swiper)`
   width: 100%;
-
-  @media (min-width: ${screenSizes.medium}) {
-    width: 100%;
-  }
 `;
 
 export const StyledContainerSwipers = styled.div`
@@ -20,21 +16,15 @@ export const StyledContainerSwipers = styled.div`
   @media (min-width: ${screenSizes.medium}) {
     margin-left: 40px;
   }
-
-  @media (min-width: ${screenSizes.large}) {
-    margin-left: 0px;
-  }
 `;
 
 export const StyledDisplayCardsContainer = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
 
   @media (min-width: ${screenSizes.large}) {
-    width: 850px;
-    justify-content: center;
     margin: auto;
   }
 `;
@@ -43,6 +33,6 @@ export const StyledSwiperSlide = styled(SwiperSlide)`
   width: 240px;
 
   @media (min-width: ${screenSizes.large}) {
-    width: 250px;
+    width: 265px;
   }
 `;

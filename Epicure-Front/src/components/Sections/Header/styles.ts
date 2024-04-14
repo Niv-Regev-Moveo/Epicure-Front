@@ -5,6 +5,10 @@ import {
   screenSizes,
 } from "../../../Shared/constants";
 
+interface InputSearchBarProps {
+  icon: JSX.Element;
+}
+
 export const StyledHeaderContainer = styled.header`
   display: flex;
   justify-content: space-between;
@@ -38,7 +42,6 @@ export const StyledLeftContainer = styled.div`
   flex: 40%;
   display: flex;
   align-items: center;
-  padding-left: 2%;
 
   @media (min-width: ${screenSizes.medium}) {
     padding-left: 5%;
@@ -63,3 +66,5 @@ export const StyledCenterContainer = styled.div`
   display: flex;
   justify-content: center;
 `;
+
+export const StyledInputSearchBar = styled.input<InputSearchBarProps>``;

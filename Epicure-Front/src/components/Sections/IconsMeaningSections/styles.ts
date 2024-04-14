@@ -1,5 +1,9 @@
 import styled from "styled-components";
-import { backgroundColors, screenSizes } from "../../../Shared/constants";
+import {
+  backgroundColors,
+  fontSizes,
+  screenSizes,
+} from "../../../Shared/constants";
 
 export const StyledIconsMeaningContainer = styled.div`
   display: flex;
@@ -35,5 +39,14 @@ export const StyledIconExplanationContainer = styled.div`
     padding-top: 0px;
     padding-left: 25px;
     padding-right: 25px;
+  }
+`;
+
+export const StyledIconsSectionsTitle = styled.h2`
+  font-size: ${fontSizes.medium18};
+  font-weight: 200;
+
+  @media (min-width: ${screenSizes.medium}) {
+    font-size: ${fontSizes.big};
   }
 `;

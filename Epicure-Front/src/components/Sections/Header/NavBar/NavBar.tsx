@@ -10,12 +10,16 @@ import {
   StyledBigScreenNavBar,
   NavBarLink,
   StyledEpicureLogoTitle,
+  StyledLeftLogoNavBarContainer,
 } from "./styles";
-import LogoSVG from "../../../../assets/Icons/LogoSVG";
 import HamburgerSVG from "../../../../assets/Icons/HamburgerSVG";
+import LogoNavBarSVG from "../../../../assets/Icons/LogoNavBarSVG";
 
 const NavBar = () => {
   const [extendNavBar, setExtendNavBar] = useState(false);
+  // const [isShown, setIsShown] = useState(false);
+
+  // console.log(setIsShown);
 
   const title = "EPICURE";
 
@@ -25,7 +29,7 @@ const NavBar = () => {
         onClick={() => {
           setExtendNavBar((currentValue) => !currentValue);
         }}
-      ></OpenHamburgerLinksButton>
+      />
       {extendNavBar ? (
         <>
           <StyledNavBarLinkContainer extendNavBar={extendNavBar}>
@@ -63,10 +67,14 @@ const NavBar = () => {
         </>
       ) : (
         <>
-          <StyledBigScreenNavBar extendNavBar={extendNavBar}>
+          <StyledBigScreenNavBar>
             <HamburgerSVG />
           </StyledBigScreenNavBar>
-          <LogoSVG></LogoSVG>
+
+          <StyledLeftLogoNavBarContainer>
+            <LogoNavBarSVG />
+          </StyledLeftLogoNavBarContainer>
+
           <StyledEpicureLogoTitle>{title}</StyledEpicureLogoTitle>
           <NavBarLink to={"/Restaurants"}>Restaurants</NavBarLink>
           <NavBarLink to={"/Chefs"}>Chefs</NavBarLink>

@@ -25,7 +25,7 @@ export const StyledAboutUsSectionContainer = styled.div`
     justify-content: space-between;
     padding-top: 0;
     position: relative;
-    min-height: 600px;
+    min-height: 520px;
     padding-left: 8%;
     padding-right: 8%;
   }
@@ -85,7 +85,6 @@ export const StyledDescription = styled.p`
 
   @media (min-width: ${screenSizes.small}) {
     text-align: center;
-    font-size: ${fontSizes.large};
   }
 
   @media (min-width: ${screenSizes.medium}) {
