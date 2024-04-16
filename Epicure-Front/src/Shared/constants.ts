@@ -7,6 +7,7 @@ export const fontSizes: Record<string, string> = {
   xlLarge: "24px",
   big: "30px",
   xlxLarge: "32px",
+  Giant: "40px",
 };
 
 export const backgroundColors: Record<string, string> = {
@@ -25,6 +26,7 @@ export const screenSizes: Record<string, string> = {
   small: "375px",
   medium: "600px",
   large: "900px",
+  big: "1440px",
 };
 
 export const letterSpacing: Record<string, string> = {
@@ -34,6 +36,9 @@ export const letterSpacing: Record<string, string> = {
 };
 
 export const breakPointsSwiper: Record<string, string> = {
+  extraExtraSmallBreakPoint: "300px",
+  extraSmallBreakPoint: "320px",
+  tinyBreakPoint: "350px",
   breakPointMobile: "375px",
   breakPointSmall: "475px",
   breakPointMedium: "600px",

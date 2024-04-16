@@ -9,9 +9,7 @@ const ChefSection = () => {
   return (
     <StyledChefSectionContainer>
       <SectionsTitle title="YOSSI'S RESTAURANTS " />
-      <SwiperEpicure
-        card={<Card image={claro} title={"Restaurant name from data"} />}
-      />
+      <SwiperEpicure card={<Card image={claro} title={"Onza"} />} />
       <TitleArrow />
     </StyledChefSectionContainer>
   );

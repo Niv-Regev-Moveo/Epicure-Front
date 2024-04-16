@@ -8,21 +8,24 @@ import {
 
 import { Link } from "react-router-dom";
 
-export const StyledArrowTitleContainer = styled.div`
-  margin-top: 15px;
-
-  @media (min-width: ${screenSizes.medium}) {
-    margin-left: 70%;
-  }
-`;
-
 export const StyledLinkedSectionTitle = styled(Link)`
   display: flex;
   flex-direction: row;
   align-items: center;
   text-decoration: none;
+  margin-top: 10px;
 
-  @media (min-width: ${screenSizes.media}) {
+  @media (min-width: ${screenSizes.medium}) {
+    padding-left: 70%;
+  }
+
+  @media (min-width: ${screenSizes.large}) {
+    padding-left: 67%;
+  }
+
+  @media (min-width: ${screenSizes.big}) {
+    padding-left: 66%;
+    margin-top: 20px;
   }
 `;
 
@@ -31,9 +34,9 @@ export const StyledTitle = styled.h3`
   color: ${colors.primary};
   font-size: ${fontSizes.medium};
   font-weight: 400;
-  padding-bottom: 3px;
   padding-right: 10px;
 
-  @media (min-width: ${screenSizes.medium}) {
+  @media (min-width: ${screenSizes.big}) {
+    font-size: ${fontSizes.xlLarge};
   }
 `;

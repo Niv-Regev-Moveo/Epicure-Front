@@ -16,9 +16,9 @@ const HomePage = () => {
       <IconsMeaningSections />
       <ChefOfTheWeekSection
         image={"Chef Image"}
-        title={"Chef Name"}
+        ChefName={"Yossi Shitrit"}
         text={
-          "Chef descriLorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, nihil consequuntur? At impedit error similique nam reprehenderit nemo culpa, deleniti voluptate, qui ex hic consectetur ea unde. Ad, cupiditate tempore?ption"
+          "Chef Yossi Shitrit has been living and breathing his culinary dreams for more than two decades, including running the kitchen in his first restaurant, the fondly-remembered Violet, located in Moshav  Udim. Shitrit's creativity and culinary  acumen born of long experience  are expressed in the every detail of each and every dish."
         }
       />
       <ChefSection />

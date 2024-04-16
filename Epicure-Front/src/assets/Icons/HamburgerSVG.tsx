@@ -1,5 +1,3 @@
-import React from "react";
-
 const HamburgerSVG = () => {
   return (
     <svg
@@ -9,15 +7,15 @@ const HamburgerSVG = () => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clip-path="url(#clip0_29684_6021)">
+      <g clipPath="url(#clip0_29684_6021)">
         <line
           x1="4.5"
           y1="3.5"
           x2="19.5"
           y2="3.5"
           stroke="black"
-          stroke-opacity="0.9"
-          stroke-linecap="round"
+          strokeOpacity="0.9"
+          strokeLinecap="round"
         />
         <line
           x1="4.5"
@@ -25,8 +23,8 @@ const HamburgerSVG = () => {
           x2="19.5"
           y2="11.5"
           stroke="black"
-          stroke-opacity="0.9"
-          stroke-linecap="round"
+          strokeOpacity="0.9"
+          strokeLinecap="round"
         />
         <line
           x1="4.5"
@@ -34,8 +32,8 @@ const HamburgerSVG = () => {
           x2="19.5"
           y2="19.5"
           stroke="black"
-          stroke-opacity="0.9"
-          stroke-linecap="round"
+          strokeOpacity="0.9"
+          strokeLinecap="round"
         />
       </g>
       <defs>

@@ -1,26 +1,34 @@
-import React from "react";
+import { useMediaQuery } from "react-responsive";
 import AppleSVG from "../../../assets/Icons/AppleSVG";
 import GooglePlaySVG from "../../../assets/Icons/GooglePlaySVG";
 import LogoTitleSVG from "../../../assets/Icons/LogoTitleSVG";
+
 import {
   StyledAboutUsSectionContainer,
   StyledButtonsAndDescriptionContainer,
   StyledButtonsContainer,
   StyledDescription,
   StyledSectionsTitle,
+  StyledTitleAndDescriptionContainer,
+  StyledLogoContainer,
 } from "./styles";
+import BigLogoTitle from "../../../assets/Icons/biglogoTitle";
 
-interface AboutUsProps {
-  description: string;
-}
-
-const AboutSection = ({ description }: AboutUsProps) => {
+const AboutSection = () => {
   const title = "ABOUT US:";
-  description =
-    "orem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus distinctio explicabo optio ab molestiae quaerat at eligendi atque? Vitae quisquam maiores tempora placeat velit numquam est animi quaerat, illo minima?";
+  const description = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a lacus vel justo fermentum bibendum non 
+eu ipsum. Cras porta malesuada eros, eget blandit
+turpis suscipit at.  Vestibulum sed massa in magna sodales porta.  Vivamus elit urna, 
+dignissim a vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a lacus vel justo fermentum bibendum no
+eu ipsum. Cras porta malesuada eros.`;
+
+  const isBigScreen = useMediaQuery({ minWidth: 1439 });
+
   return (
     <StyledAboutUsSectionContainer>
-      <LogoTitleSVG></LogoTitleSVG>
+      <StyledLogoContainer>
+        {isBigScreen ? <BigLogoTitle /> : <LogoTitleSVG />}
+      </StyledLogoContainer>
 
       <StyledButtonsAndDescriptionContainer>
         <StyledButtonsContainer>
@@ -28,9 +36,10 @@ const AboutSection = ({ description }: AboutUsProps) => {
           <AppleSVG></AppleSVG>
         </StyledButtonsContainer>
 
-        <StyledSectionsTitle>{title}</StyledSectionsTitle>
-
-        <StyledDescription>{description}</StyledDescription>
+        <StyledTitleAndDescriptionContainer>
+          <StyledSectionsTitle>{title}</StyledSectionsTitle>
+          <StyledDescription>{description}</StyledDescription>
+        </StyledTitleAndDescriptionContainer>
       </StyledButtonsAndDescriptionContainer>
     </StyledAboutUsSectionContainer>
   );

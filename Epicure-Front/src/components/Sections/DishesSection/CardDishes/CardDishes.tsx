@@ -1,21 +1,48 @@
-import SpicySVG from "../../../../assets/Icons/SpicySVG";
+import React from "react";
 import {
-  StyledDIshName,
+  StyledDIshIngredients,
   StyledCardDishContainer,
   StyledDishPrice,
+  StyledDescriptionAndIconContainer,
+  StyledSpicySVG,
+  StyledSVGContainer,
 } from "./styles";
+import ShekelSVG from "../../../../assets/Icons/ShekelSVG";
 
 const CardDishes = () => {
-  const dishIngredients =
-    "dish Ingredients name from data , dish Ingredients name from data,  dish Ingredients name from data,  dish Ingredients name from data,";
+  const separateIngredients = (ingredients: string): string[] => {
+    const separatedIngredients: string[] = ingredients.split(",");
+
+    const trimmedIngredients: string[] = separatedIngredients.map(
+      (ingredient) => ingredient.trim()
+    );
+
+    return trimmedIngredients;
+  };
+
+  const dishIngredients = `Shrimps, Glass 
+    Noodles, Kemiri Nuts,
+    Shallots,
+    Lemon Grass, Magic
+    Chili Brown Coconut`;
+
+  const separatedIngredients = separateIngredients(dishIngredients);
 
   const dishPrice = "88";
 
   return (
     <StyledCardDishContainer>
-      <StyledDIshName>{dishIngredients}</StyledDIshName>
-      <SpicySVG />
-      <StyledDishPrice>{dishPrice}</StyledDishPrice>
+      <StyledDescriptionAndIconContainer>
+        <StyledDIshIngredients>
+          {separatedIngredients.join(", ")}
+        </StyledDIshIngredients>
+        <StyledSVGContainer>
+          <StyledSpicySVG width="40" height="31" />
+        </StyledSVGContainer>
+      </StyledDescriptionAndIconContainer>
+      <StyledDishPrice>
+        <ShekelSVG /> {dishPrice}
+      </StyledDishPrice>
     </StyledCardDishContainer>
   );
 };

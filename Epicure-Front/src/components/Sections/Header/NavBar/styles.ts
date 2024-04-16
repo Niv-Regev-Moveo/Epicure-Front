@@ -21,13 +21,18 @@ export const StyledNavBarLinkContainer = styled.nav<NavBarProps>`
 `;
 
 export const NavBarLink = styled(Link)`
-  color: ${colors.primary};
-  margin: 10px;
-  text-decoration: none;
-  font-weight: 200;
+  display: none;
 
-  @media (max-width: ${screenSizes.medium}) {
-    display: none;
+  @media (min-width: ${screenSizes.medium}) {
+    display: block;
+    color: ${colors.primary};
+    margin: 10px;
+    text-decoration: none;
+    font-weight: 200;
+  }
+  @media (min-width: ${screenSizes.large}) {
+    display: block;
+    font-size: ${fontSizes.medium18};
   }
 `;
 
@@ -48,16 +53,17 @@ export const OpenHamburgerLinksButton = styled.button`
     display: none;
   }
 `;
-
 export const NavBarExtendContainer = styled.nav<NavBarProps>`
   display: flex;
   flex-direction: column;
   margin-left: 24px;
   padding-top: 10px;
   font-weight: 200;
+  height: 320px;
   letter-spacing: ${letterSpacing.small};
   font-size: ${fontSizes.medium};
-  z-index: ${(props) => (props.extendNavBar ? "999" : "1")};
+  z-index: ${(props) => (props.extendNavBar ? "1000" : "-1")};
+  box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.05);
 
   @media (min-width: ${screenSizes.medium}) {
     display: none;
@@ -70,7 +76,6 @@ export const NavBarLinkExtended = styled(Link)`
   padding-top: 15px;
   padding-bottom: 15px;
   margin-bottom: 5px;
-
   cursor: pointer;
 `;
 
@@ -98,7 +103,7 @@ export const ClosedHamburgerLinkButton = styled.button`
   border: none;
   cursor: pointer;
   margin-left: 20px;
-  padding-top: 10px;
+  padding-top: 5px;
   padding-bottom: 0px;
 
   @media (min-width: ${screenSizes.medium}) {
@@ -106,18 +111,8 @@ export const ClosedHamburgerLinkButton = styled.button`
   }
 `;
 
-export const StyledBigScreenNavBar = styled.div<NavBarProps>`
+export const StyledBigScreenNavBar = styled.div`
   @media (min-width: ${screenSizes.medium}) {
-    display: none;
-  }
-
-  @media (min-width: ${screenSizes.large}) {
-    background-color: red;
-  }
-`;
-
-export const StyledContainerLogoNavBar = styled.div`
-  @media (max-width: ${screenSizes.medium}) {
     display: none;
   }
 `;
@@ -127,8 +122,17 @@ export const StyledEpicureLogoTitle = styled.div`
   font-weight: 300;
   letter-spacing: ${letterSpacing.small};
   margin-right: 15px;
-  margin-left: 10px;
-  @media (max-width: ${screenSizes.medium}) {
-    display: none;
+  display: none;
+
+  @media (min-width: ${screenSizes.medium}) {
+    display: block;
+  }
+`;
+
+export const StyledLeftLogoNavBarContainer = styled.div`
+  display: none;
+  @media (min-width: ${screenSizes.medium}) {
+    margin-right: 20px;
+    display: block;
   }
 `;

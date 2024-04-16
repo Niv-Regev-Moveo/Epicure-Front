@@ -4,6 +4,11 @@ import {
   fontSizes,
   screenSizes,
 } from "../../../Shared/constants";
+import { Link } from "react-router-dom";
+
+interface InputSearchBarProps {
+  icon: JSX.Element;
+}
 
 export const StyledHeaderContainer = styled.header`
   display: flex;
@@ -12,13 +17,10 @@ export const StyledHeaderContainer = styled.header`
   width: 100%;
   background-color: ${backgroundColors.primary};
   position: sticky;
-  height: 64px;
+  height: 46px;
 
-  @media screen and (max-width: ${screenSizes.medium}) {
-    height: 46px;
-  }
-
-  @media screen and (min-width: ${screenSizes.large}) {
+  @media (min-width: ${screenSizes.medium}) {
+    height: 64px;
   }
 `;
 
@@ -41,17 +43,36 @@ export const StyledLeftContainer = styled.div`
   flex: 40%;
   display: flex;
   align-items: center;
-  padding-left: 2%;
+
+  @media (min-width: ${screenSizes.medium}) {
+    padding-left: 5%;
+  }
+  @media (min-width: ${screenSizes.medium}) {
+    padding-left: 7%;
+  }
 `;
 
 export const StyledRightContainer = styled.div`
   flex: 40%;
   display: flex;
   justify-content: flex-end;
+  min-width: 180px;
+
+  @media (min-width: ${screenSizes.medium}) {
+    padding-right: 5%;
+  }
 `;
 
 export const StyledCenterContainer = styled.div`
   flex: 20%;
   display: flex;
   justify-content: center;
+`;
+
+export const StyledInputSearchBar = styled.input<InputSearchBarProps>``;
+
+export const NavBarLink = styled(Link)`
+  @media (min-width: ${screenSizes.medium}) {
+    display: none;
+  }
 `;

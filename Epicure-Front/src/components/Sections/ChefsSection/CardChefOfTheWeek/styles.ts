@@ -7,10 +7,8 @@ import {
 
 export const StyledCardRestaurantContainer = styled.div`
   width: 245px;
-  padding-left: 10x;
 
   @media (min-width: ${screenSizes.medium}) {
-    margin-left: 20px;
   }
 `;
 
@@ -33,5 +31,4 @@ export const StyledChefName = styled.h5`
   font-weight: 200;
   padding-left: 20px;
   margin: 0;
-  padding-top: 5px;
 `;
