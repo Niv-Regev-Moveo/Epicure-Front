@@ -17,11 +17,6 @@ import LogoNavBarSVG from "../../../../assets/Icons/LogoNavBarSVG";
 
 const NavBar = () => {
   const [extendNavBar, setExtendNavBar] = useState(false);
-  // const [isShown, setIsShown] = useState(false);
-
-  // console.log(setIsShown);
-
-  const title = "EPICURE";
 
   return (
     <>
@@ -75,7 +70,7 @@ const NavBar = () => {
             <LogoNavBarSVG />
           </StyledLeftLogoNavBarContainer>
 
-          <StyledEpicureLogoTitle>{title}</StyledEpicureLogoTitle>
+          <StyledEpicureLogoTitle />
           <NavBarLink to={"/Restaurants"}>Restaurants</NavBarLink>
           <NavBarLink to={"/Chefs"}>Chefs</NavBarLink>
         </>

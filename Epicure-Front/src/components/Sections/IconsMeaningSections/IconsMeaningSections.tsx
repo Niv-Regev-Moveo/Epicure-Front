@@ -22,7 +22,7 @@ const IconsMeaningSections = () => {
 
         <StyledIconContainer>
           <StyledIconExplanationContainer>
-            <SpicySVG width={"77px"} height={"60px"} />
+            <SpicySVG width={"60"} height={"45"} />
             <IconExplainTitle title="Spicy" />
           </StyledIconExplanationContainer>
 

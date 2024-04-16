@@ -14,6 +14,10 @@ export const StyledIconsMeaningContainer = styled.div`
   @media (min-width: ${screenSizes.medium}) {
     justify-content: center;
   }
+
+  @media (min-width: ${screenSizes.big}) {
+    margin-top: 80px;
+  }
 `;
 
 export const StyledTitleContainer = styled.div``;
@@ -45,6 +49,7 @@ export const StyledIconExplanationContainer = styled.div`
 export const StyledIconsSectionsTitle = styled.h2`
   font-size: ${fontSizes.medium18};
   font-weight: 200;
+  padding-top: 20px;
 
   @media (min-width: ${screenSizes.medium}) {
     font-size: ${fontSizes.big};

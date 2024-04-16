@@ -3,7 +3,7 @@ import { SwiperSlide } from "swiper/react";
 import {
   StyledDisplayCardsContainer,
   StyledSwiper,
-  StyledSwiperSlide,
+  StyledCardContainerSwiper,
 } from "./styles";
 import { useEffect, useState } from "react";
 import { breakPointsSwiper } from "../../../Shared/constants";
@@ -80,9 +80,9 @@ const SwiperEpicure = ({ card }: CardProps) => {
         </StyledSwiper>
       ) : (
         <StyledDisplayCardsContainer>
-          <StyledSwiperSlide>{card}</StyledSwiperSlide>
-          <StyledSwiperSlide>{card}</StyledSwiperSlide>
-          <StyledSwiperSlide>{card}</StyledSwiperSlide>
+          <StyledCardContainerSwiper>{card}</StyledCardContainerSwiper>
+          <StyledCardContainerSwiper>{card}</StyledCardContainerSwiper>
+          <StyledCardContainerSwiper>{card}</StyledCardContainerSwiper>
         </StyledDisplayCardsContainer>
       )}
     </>

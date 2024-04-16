@@ -25,7 +25,7 @@ export const StyledAboutUsSectionContainer = styled.div`
     justify-content: space-between;
     padding-top: 0;
     position: relative;
-    min-height: 520px;
+    min-height: 350px;
     padding-left: 8%;
     padding-right: 8%;
   }
@@ -34,6 +34,9 @@ export const StyledAboutUsSectionContainer = styled.div`
     padding-right: 8%;
     height: 500px;
     min-height: 500px;
+  }
+  @media (min-width: ${screenSizes.big}) {
+    padding-right: 10%;
   }
 `;
 
@@ -44,9 +47,6 @@ export const StyledButtonsContainer = styled.div`
   height: 125px;
   margin-top: 30px;
 
-  @media (min-width: ${screenSizes.small}) {
-    align-items: center;
-  }
   @media (min-width: ${screenSizes.medium}) {
     position: absolute;
     display: flex;
@@ -80,12 +80,9 @@ export const StyledTitleAndDescriptionContainer = styled.div`
 
 export const StyledDescription = styled.p`
   font-weight: 200;
-  font-size: ${fontSizes.medium18};
+  letter-spacing: ${letterSpacing.medium};
+  width: 100%; //
   max-width: 570px;
-
-  @media (min-width: ${screenSizes.small}) {
-    text-align: center;
-  }
 
   @media (min-width: ${screenSizes.medium}) {
     text-align: start;
@@ -95,6 +92,11 @@ export const StyledDescription = styled.p`
   @media (min-width: ${screenSizes.large}) {
     text-align: start;
     width: 500px;
+  }
+  @media (min-width: ${screenSizes.big}) {
+    font-size: ${fontSizes.large};
+    letter-spacing: ${letterSpacing.large};
+    line-height: 1.5;
   }
 `;
 
@@ -114,6 +116,9 @@ export const StyledLogoTitle = styled.div`
     order: 1;
     margin-left: auto;
   }
+
+  @media (min-width: ${screenSizes.big}) {
+  }
 `;
 
 export const StyledSectionsTitle = styled.h3`
@@ -124,7 +129,6 @@ export const StyledSectionsTitle = styled.h3`
   letter-spacing: ${letterSpacing.small};
 
   @media (min-width: ${screenSizes.small}) {
-    text-align: center;
     font-size: ${fontSizes.large};
   }
 
@@ -133,9 +137,13 @@ export const StyledSectionsTitle = styled.h3`
     text-align: start;
   }
 `;
+
 export const StyledLogoContainer = styled.div`
+  margin-right: 230px;
+
   @media (min-width: ${screenSizes.medium}) {
     position: relative;
+    margin-right: none;
     top: -20px;
     left: 85%;
   }
@@ -143,5 +151,10 @@ export const StyledLogoContainer = styled.div`
   @media (min-width: ${screenSizes.large}) {
     top: 0px;
     right: 10%;
+  }
+
+  @media (min-width: ${screenSizes.big}) {
+    top: 0px;
+    right: 20%;
   }
 `;

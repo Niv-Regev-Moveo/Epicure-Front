@@ -4,6 +4,7 @@ import {
   fontSizes,
   screenSizes,
 } from "../../../Shared/constants";
+import { Link } from "react-router-dom";
 
 interface InputSearchBarProps {
   icon: JSX.Element;
@@ -55,6 +56,7 @@ export const StyledRightContainer = styled.div`
   flex: 40%;
   display: flex;
   justify-content: flex-end;
+  min-width: 180px;
 
   @media (min-width: ${screenSizes.medium}) {
     padding-right: 5%;
@@ -68,3 +70,9 @@ export const StyledCenterContainer = styled.div`
 `;
 
 export const StyledInputSearchBar = styled.input<InputSearchBarProps>``;
+
+export const NavBarLink = styled(Link)`
+  @media (min-width: ${screenSizes.medium}) {
+    display: none;
+  }
+`;

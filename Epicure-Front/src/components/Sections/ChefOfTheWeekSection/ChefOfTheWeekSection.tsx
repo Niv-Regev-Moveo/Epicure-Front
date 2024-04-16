@@ -6,26 +6,29 @@ import {
   StyledImageTitleContainer,
   StyledCOTWSectionContainer,
   StyledDescriptionContainer,
+  StyledSectionsTitle,
 } from "./styles";
 import ChefImage from "../../../assets/Photos/ChefImage.png";
-import SectionsTitle from "../../Common/SectionsTitle";
 
 interface ChefOfTheWeekSectionProps {
   image?: string;
-  title?: string;
+  ChefName?: string;
   text?: string;
 }
 
-const ChefOfTheWeekSection = ({ title, text }: ChefOfTheWeekSectionProps) => {
+const ChefOfTheWeekSection = ({
+  text,
+  ChefName,
+}: ChefOfTheWeekSectionProps) => {
   return (
     <>
       <StyledCOTWSectionContainer>
-        <SectionsTitle title="CHEF OF THE WEEK:" />
+        <StyledSectionsTitle>CHEF OF THE WEEK:</StyledSectionsTitle>
 
         <StyledCOTWContainer>
           <StyledImageTitleContainer>
-            <StyledChefImg src={ChefImage} alt={title} />
-            <StyledChefNameTitle>{title}</StyledChefNameTitle>
+            <StyledChefImg src={ChefImage} alt={ChefName} />
+            <StyledChefNameTitle>{ChefName}</StyledChefNameTitle>
           </StyledImageTitleContainer>
           <StyledDescriptionContainer>
             <ChefDescription>{text}</ChefDescription>

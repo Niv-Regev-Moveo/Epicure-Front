@@ -21,13 +21,18 @@ export const StyledNavBarLinkContainer = styled.nav<NavBarProps>`
 `;
 
 export const NavBarLink = styled(Link)`
-  color: ${colors.primary};
-  margin: 10px;
-  text-decoration: none;
-  font-weight: 200;
+  display: none;
 
-  @media (max-width: ${screenSizes.medium}) {
-    display: none;
+  @media (min-width: ${screenSizes.medium}) {
+    display: block;
+    color: ${colors.primary};
+    margin: 10px;
+    text-decoration: none;
+    font-weight: 200;
+  }
+  @media (min-width: ${screenSizes.large}) {
+    display: block;
+    font-size: ${fontSizes.medium18};
   }
 `;
 
@@ -48,7 +53,6 @@ export const OpenHamburgerLinksButton = styled.button`
     display: none;
   }
 `;
-
 export const NavBarExtendContainer = styled.nav<NavBarProps>`
   display: flex;
   flex-direction: column;
@@ -58,7 +62,7 @@ export const NavBarExtendContainer = styled.nav<NavBarProps>`
   height: 320px;
   letter-spacing: ${letterSpacing.small};
   font-size: ${fontSizes.medium};
-  z-index: ${(props) => (props.extendNavBar ? "999" : "1")};
+  z-index: ${(props) => (props.extendNavBar ? "1000" : "-1")};
   box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.05);
 
   @media (min-width: ${screenSizes.medium}) {

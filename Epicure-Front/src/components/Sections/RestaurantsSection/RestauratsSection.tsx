@@ -1,7 +1,7 @@
 import Card from "../../Common/Card";
 import SectionsTitle from "../../Common/SectionsTitle";
 import SwiperEpicure from "../../Common/SwiperEpicure/SwiperEpicure";
-import { StyledContainerSwipers } from "../../Common/SwiperEpicure/styles";
+import { StyledContainerSwipers } from "./styles";
 import TitleArrow from "../../Common/TitleArrow";
 import CardRestaurant from "./CardRestaurant";
 import claro from "../../../assets/Photos/claro.png";
@@ -14,9 +14,9 @@ const RestaurantsSection = () => {
         card={
           <Card
             image={claro}
-            title={"Restaurant name from data"}
+            title={"Claro"}
             bottomComponent={
-              <CardRestaurant starsImage={""} chefName={"chef name"} />
+              <CardRestaurant starsImage={""} chefName={"Ran Shmueli"} />
             }
           />
         }

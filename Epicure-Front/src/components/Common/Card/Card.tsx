@@ -13,7 +13,7 @@ interface CardProps {
   bottomComponent?: JSX.Element;
 }
 
-const Card = ({ title, bottomComponent, image }: CardProps) => {
+const Card = ({ title, image, bottomComponent }: CardProps) => {
   return (
     <StyledCardContainer>
       <StyledCardImgContainer>

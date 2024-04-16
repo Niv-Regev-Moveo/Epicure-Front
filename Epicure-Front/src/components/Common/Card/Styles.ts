@@ -2,48 +2,78 @@ import styled from "styled-components";
 import {
   backgroundColors,
   fontSizes,
+  letterSpacing,
   screenSizes,
 } from "../../../Shared/constants";
 
 export const StyledCardContainer = styled.div`
   width: 245px;
-  padding-left: 10x;
+  background-color: ${backgroundColors.cards};
 
   @media (min-width: ${screenSizes.medium}) {
     margin-left: 20px;
+    padding-bottom: 0px;
+  }
+
+  @media (min-width: ${screenSizes.large}) {
+    width: 260px;
+  }
+
+  @media (min-width: ${screenSizes.big}) {
+    min-width: 379px;
+    min-height: 404px;
   }
 `;
 
 export const StyledCardNameChef = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  background-color: ${backgroundColors.cards};
   min-height: 81px;
-  padding-bottom: 15px;
 `;
 
 export const StyledCardImg = styled.img`
   height: 151.8px;
+
+  @media (min-width: ${screenSizes.large}) {
+    width: 260px;
+  }
+
+  @media (min-width: ${screenSizes.big}) {
+    width: 379px;
+    height: 234px;
+  }
 `;
 
 export const StyledName = styled.h3`
   font-size: ${fontSizes.medium18};
   font-weight: 400;
-  padding-left: 20px;
+  padding-left: 15px;
   margin: 0;
   padding-bottom: 5px;
-  padding-top: 10px;
+  padding-top: 16px;
+  letter-spacing: ${letterSpacing.medium};
 
   @media (min-width: ${screenSizes.medium}) {
     text-align: center;
     padding-left: 0px;
+    font-size: ${fontSizes.large};
+  }
+
+  @media (min-width: ${screenSizes.large}) {
+    font-size: ${fontSizes.xlxLarge};
+  }
+  @media (min-width: ${screenSizes.big}) {
+    font-size: ${fontSizes.Giant};
   }
 `;
 
 export const StyledBottomComponent = styled.div`
   display: flex;
   flex-direction: column;
+
+  @media (min-width: ${screenSizes.big}) {
+    align-items: center;
+  }
 `;
 
 export const StyledCardImgContainer = styled.div``;

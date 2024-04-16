@@ -1,6 +1,8 @@
+import { useMediaQuery } from "react-responsive";
 import AppleSVG from "../../../assets/Icons/AppleSVG";
 import GooglePlaySVG from "../../../assets/Icons/GooglePlaySVG";
 import LogoTitleSVG from "../../../assets/Icons/LogoTitleSVG";
+
 import {
   StyledAboutUsSectionContainer,
   StyledButtonsAndDescriptionContainer,
@@ -10,19 +12,22 @@ import {
   StyledTitleAndDescriptionContainer,
   StyledLogoContainer,
 } from "./styles";
+import BigLogoTitle from "../../../assets/Icons/biglogoTitle";
 
-interface AboutUsProps {
-  description: string;
-}
-
-const AboutSection = ({ description }: AboutUsProps) => {
+const AboutSection = () => {
   const title = "ABOUT US:";
-  description =
-    "orecabo optillo m us at eligendi atque? Vitae quisquam maiores teerat, illosectetur adipisicing elit. Necessitatibus distinctio explicabo optio ab molestiae quaerat at eligendi atque? Vitae quisquam maiores tempora placeat velit numquam est animi quaerat, illo minima? consectetur adipisicing elit. Necessitatibus distinctio explicabo optio ab molestiae quaerat at eligendi atque? Vitae quisquam maiores tempora placeat velit numquam est animi quaerat, illo m consectetur adipisicing elit. Necessitatibus distinctio explicabo optio ab molestiae quaerat at eligendi atque? Vitae quisquam maiores tempora placeat velit numquam est animi quaerat, illo m ";
+  const description = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a lacus vel justo fermentum bibendum non 
+eu ipsum. Cras porta malesuada eros, eget blandit
+turpis suscipit at.  Vestibulum sed massa in magna sodales porta.  Vivamus elit urna, 
+dignissim a vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a lacus vel justo fermentum bibendum no
+eu ipsum. Cras porta malesuada eros.`;
+
+  const isBigScreen = useMediaQuery({ minWidth: 1439 });
+
   return (
     <StyledAboutUsSectionContainer>
       <StyledLogoContainer>
-        <LogoTitleSVG />
+        {isBigScreen ? <BigLogoTitle /> : <LogoTitleSVG />}
       </StyledLogoContainer>
 
       <StyledButtonsAndDescriptionContainer>

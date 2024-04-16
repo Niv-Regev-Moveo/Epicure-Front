@@ -1,21 +1,9 @@
 import styled from "styled-components";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper } from "swiper/react";
 import { screenSizes } from "../../../Shared/constants";
 
 export const StyledSwiper = styled(Swiper)`
   width: 100%;
-`;
-
-export const StyledContainerSwipers = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  margin-left: 20px;
-  margin-top: 20px;
-
-  @media (min-width: ${screenSizes.medium}) {
-    margin-left: 40px;
-  }
 `;
 
 export const StyledDisplayCardsContainer = styled.div`
@@ -23,16 +11,12 @@ export const StyledDisplayCardsContainer = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
 
   @media (min-width: ${screenSizes.large}) {
-    margin: auto;
+    justify-content: center;
   }
 `;
 
-export const StyledSwiperSlide = styled(SwiperSlide)`
-  width: 240px;
-
-  @media (min-width: ${screenSizes.large}) {
-    width: 265px;
-  }
-`;
+export const StyledCardContainerSwiper = styled.div``;

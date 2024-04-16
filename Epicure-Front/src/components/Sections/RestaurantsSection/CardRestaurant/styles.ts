@@ -1,5 +1,9 @@
 import styled from "styled-components";
-import { fontSizes, screenSizes } from "../../../../Shared/constants";
+import {
+  fontSizes,
+  letterSpacing,
+  screenSizes,
+} from "../../../../Shared/constants";
 
 export const StyledCardRestaurantContainer = styled.div`
   display: flex;
@@ -23,15 +27,18 @@ export const StyledChefName = styled.h5`
   font-size: ${fontSizes.medium16};
   font-weight: 200;
   margin: 0;
-  padding-left: 20px;
+  padding-left: 15px;
   text-align: start;
-
+  letter-spacing: ${letterSpacing.medium};
   padding-top: 5px;
 
   @media (min-width: ${screenSizes.medium}) {
     text-align: center;
-    padding-left: 0px;
     margin-bottom: 10px;
+  }
+
+  @media (min-width: ${screenSizes.big}) {
+    font-size: ${fontSizes.xlLarge};
   }
 `;
 
@@ -42,6 +49,7 @@ export const StyledStarsImage = styled.img`
     display: block;
     width: 200px;
     height: 40px;
+    padding-bottom: 10px;
   }
 
   @media (min-width: ${screenSizes.large}) {

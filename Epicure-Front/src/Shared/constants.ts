@@ -7,6 +7,7 @@ export const fontSizes: Record<string, string> = {
   xlLarge: "24px",
   big: "30px",
   xlxLarge: "32px",
+  Giant: "40px",
 };
 
 export const backgroundColors: Record<string, string> = {
@@ -25,6 +26,7 @@ export const screenSizes: Record<string, string> = {
   small: "375px",
   medium: "600px",
   large: "900px",
+  big: "1440px",
 };
 
 export const letterSpacing: Record<string, string> = {
