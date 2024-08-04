@@ -30,8 +30,7 @@ export const StyledCOTWContainer = styled.div`
   transition: 1s;
   -webkit-transition: 1s;
   -moz-transition: 1s;
-  animation: reveal 2s linear forwards; // add seconds
-  opacity: 0;
+  animation: reveal 2s linear forwards;
   filter: blur(13px);
 
   @keyframes reveal {
@@ -65,6 +64,7 @@ export const StyledImageTitleContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  filter: grayscale(100%);
 
   @media (min-width: ${screenSizes.medium}) {
     width: 30%;

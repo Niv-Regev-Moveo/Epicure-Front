@@ -19,4 +19,7 @@ export const StyledDisplayCardsContainer = styled.div`
   }
 `;
 
-export const StyledCardContainerSwiper = styled.div``;
+export const StyledCardContainerSwiper = styled.div`
+  display: flex;
+  align-content: space-between;
+`;

@@ -1,21 +1,21 @@
+// src/components/Common/Restaurant/CardRestaurant.tsx
+import React from "react";
 import {
   StyledChefName,
   StyledCardRestaurantContainer,
-  StyledStarsImage,
+  StyledStarsContainer,
 } from "./styles";
+import getStars from "../../../../Utils/getStars";
+import { CardRestaurantProps } from "../../../../redux/chunk/collections/restaurants/restaurants.types";
 
-import starsImage from "../../../../assets/Photos/starsImage.png";
-
-interface CardRestaurantProps {
-  chefName?: string;
-  starsImage?: string;
-}
-
-const CardRestaurant = ({ chefName }: CardRestaurantProps) => {
+const CardRestaurant: React.FC<CardRestaurantProps> = ({
+  chefName,
+  rating,
+}) => {
   return (
     <StyledCardRestaurantContainer>
       <StyledChefName>{chefName}</StyledChefName>
-      <StyledStarsImage src={starsImage} />
+      <StyledStarsContainer>{getStars(rating)}</StyledStarsContainer>
     </StyledCardRestaurantContainer>
   );
 };

@@ -4,31 +4,25 @@ import {
   StyledCardDishContainer,
   StyledDishPrice,
   StyledDescriptionAndIconContainer,
-  StyledSpicySVG,
-  StyledSVGContainer,
 } from "./styles";
 import ShekelSVG from "../../../../assets/Icons/ShekelSVG";
+import { EIconMeaning } from "../../../enum/iconMeaning.enum";
+import DynamicIcon from "./DynamicIcon";
 
-const CardDishes = () => {
-  const separateIngredients = (ingredients: string): string[] => {
-    const separatedIngredients: string[] = ingredients.split(",");
+interface CardDishesProps {
+  ingredients: string[];
+  price: number;
+  icon: EIconMeaning;
+}
 
-    const trimmedIngredients: string[] = separatedIngredients.map(
-      (ingredient) => ingredient.trim()
-    );
-
-    return trimmedIngredients;
-  };
-
-  const dishIngredients = `Shrimps, Glass 
-    Noodles, Kemiri Nuts,
-    Shallots,
-    Lemon Grass, Magic
-    Chili Brown Coconut`;
-
-  const separatedIngredients = separateIngredients(dishIngredients);
-
-  const dishPrice = "88";
+const CardDishes: React.FC<CardDishesProps> = ({
+  ingredients,
+  price,
+  icon,
+}) => {
+  const separatedIngredients = ingredients.map((ingredient) =>
+    ingredient.trim()
+  );
 
   return (
     <StyledCardDishContainer>
@@ -36,12 +30,11 @@ const CardDishes = () => {
         <StyledDIshIngredients>
           {separatedIngredients.join(", ")}
         </StyledDIshIngredients>
-        <StyledSVGContainer>
-          <StyledSpicySVG width="40" height="31" />
-        </StyledSVGContainer>
+        <DynamicIcon icon={icon} />
       </StyledDescriptionAndIconContainer>
       <StyledDishPrice>
-        <ShekelSVG /> {dishPrice}
+        <ShekelSVG />
+        {price}
       </StyledDishPrice>
     </StyledCardDishContainer>
   );
