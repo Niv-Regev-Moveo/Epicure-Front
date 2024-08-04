@@ -6,7 +6,7 @@ import {
   NavBarLinkExtended,
   StyledTopNavBarBorder,
   StyledBottomNavBarBorder,
-  ClosedHamburgerLinkButton,
+  StyledClosedHamburgerLinkButton,
   StyledBigScreenNavBar,
   NavBarLink,
   StyledEpicureLogoTitle,
@@ -31,13 +31,13 @@ const NavBar = () => {
           <StyledNavBarLinkContainer extendNavBar={extendNavBar}>
             {extendNavBar && (
               <>
-                <ClosedHamburgerLinkButton
+                <StyledClosedHamburgerLinkButton
                   onClick={() => {
                     setExtendNavBar((currentValue) => !currentValue);
                   }}
                 >
                   &#10005;
-                </ClosedHamburgerLinkButton>
+                </StyledClosedHamburgerLinkButton>
                 <NavBarExtendContainer extendNavBar={extendNavBar}>
                   <StyledTopNavBarBorder>
                     <NavBarLinkExtended to={"/Restaurants"}>

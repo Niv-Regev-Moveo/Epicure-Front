@@ -10,11 +10,13 @@ import {
   StyledSearchBarButton,
   StylesSearchImage,
 } from "./styles";
-import Hero from "../../../assets/Photos/Hero.png";
+
 import Search from "../../../assets/Photos/Search.png";
+import Hero from "../../../assets/Photos/Hero.png";
 
 const SearchBar = () => {
   const description = "Epicure works with the top chef restaurants in Tel Aviv";
+  const searchPlaceHolder = "Search for restaurants cuisine , chef";
 
   return (
     <StyledSearchBarImageContainer>
@@ -28,10 +30,7 @@ const SearchBar = () => {
             <StyledSearchBarButton>
               <StylesSearchImage src={Search} alt="search" />
             </StyledSearchBarButton>
-            <StyledSearchBarInput
-              type="text"
-              placeholder="Search for restaurants cuisine , chef"
-            />
+            <StyledSearchBarInput type="text" placeholder={searchPlaceHolder} />
           </StyledSearchBarInputContainer>
           <StyledSpanSearchIcon />
         </StyledSearchBarContainer>

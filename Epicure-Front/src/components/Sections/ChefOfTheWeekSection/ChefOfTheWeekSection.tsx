@@ -1,3 +1,4 @@
+import { ChefOfTheWeekSectionProps } from "../../../redux/chunk/collections/chefOfTheWeek/chefOfTheWeek.types";
 import {
   ChefDescription,
   StyledCOTWContainer,
@@ -8,17 +9,11 @@ import {
   StyledDescriptionContainer,
   StyledSectionsTitle,
 } from "./styles";
-import ChefImage from "../../../assets/Photos/ChefImage.png";
-
-interface ChefOfTheWeekSectionProps {
-  image?: string;
-  ChefName?: string;
-  text?: string;
-}
 
 const ChefOfTheWeekSection = ({
-  text,
-  ChefName,
+  image,
+  name,
+  description,
 }: ChefOfTheWeekSectionProps) => {
   return (
     <>
@@ -27,11 +22,11 @@ const ChefOfTheWeekSection = ({
 
         <StyledCOTWContainer>
           <StyledImageTitleContainer>
-            <StyledChefImg src={ChefImage} alt={ChefName} />
-            <StyledChefNameTitle>{ChefName}</StyledChefNameTitle>
+            <StyledChefImg src={image} alt={name} />
+            <StyledChefNameTitle>{name}</StyledChefNameTitle>
           </StyledImageTitleContainer>
           <StyledDescriptionContainer>
-            <ChefDescription>{text}</ChefDescription>
+            <ChefDescription>{description}</ChefDescription>
           </StyledDescriptionContainer>
         </StyledCOTWContainer>
       </StyledCOTWSectionContainer>

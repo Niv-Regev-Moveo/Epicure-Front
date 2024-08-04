@@ -32,15 +32,12 @@ export const StyledCardNameChef = styled.div`
 `;
 
 export const StyledCardImg = styled.img`
-  height: 151.8px;
-
-  @media (min-width: ${screenSizes.large}) {
-    width: 260px;
-  }
+  width: 100%;
+  object-fit: cover;
+  height: 151px;
 
   @media (min-width: ${screenSizes.big}) {
-    width: 379px;
-    height: 234px;
+    height: 236px;
   }
 `;
 

@@ -5,6 +5,33 @@ import {
   letterSpacing,
   screenSizes,
 } from "../../../Shared/constants";
+// added StyledDropdown and StyledDropdownItem
+export const StyledDropdown = styled.div`
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: white;
+  border: 1px solid ${colors.primary};
+  z-index: 10;
+  max-height: 300px;
+  overflow-y: auto;
+`;
+
+export const StyledDropdownItem = styled.div`
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid ${colors.primary};
+
+  &:hover {
+    background-color: ${colors.secondary};
+  }
+
+  span {
+    font-size: ${fontSizes.medium};
+  }
+`;
 
 export const StyledSearchBarImageContainer = styled.div`
   position: relative;
@@ -71,6 +98,8 @@ export const StyledDescriptionAndSearchContainer = styled.div`
   letter-spacing: ${letterSpacing.large};
   z-index: 1;
   font-weight: 200;
+  padding-left: 10px;
+  padding-right: 10px;
 
   @media (min-width: ${screenSizes.small}) {
     width: 90%;
@@ -155,7 +184,6 @@ export const StyledSearchBarInputContainer = styled.div`
   }
 
   @media (min-width: ${screenSizes.large}) {
-    width: 700px;
   }
 `;
 
