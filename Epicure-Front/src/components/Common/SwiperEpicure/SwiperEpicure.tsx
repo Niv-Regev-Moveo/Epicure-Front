@@ -1,3 +1,4 @@
+// src/components/Common/SwiperEpicure/SwiperEpicure.tsx
 import "swiper/css";
 import { SwiperSlide } from "swiper/react";
 import {
@@ -7,15 +8,23 @@ import {
 } from "./styles";
 import { useEffect, useState } from "react";
 import { breakPointsSwiper } from "../../../Shared/constants";
+import Card from "../../Common/Card";
 
-interface CardProps {
-  card: JSX.Element;
+interface SwiperEpicureProps<T extends JSX.IntrinsicAttributes> {
+  cardsData: {
+    image: string;
+    title: string;
+    BottomComponent: React.FC<T>;
+    bottomComponentProps: T;
+  }[];
 }
 
-const SwiperEpicure = ({ card }: CardProps) => {
+const SwiperEpicure = <T extends JSX.IntrinsicAttributes>({
+  cardsData = [],
+}: SwiperEpicureProps<T>) => {
   const [slidersPerView, setSlidersPerView] = useState<number>(1);
   const [showSwiper, setShowSwiper] = useState<boolean>(true);
-  const [allowSwipe, setAllowSwipe] = useState<boolean>(true);
+  const [, setAllowSwipe] = useState<boolean>(true);
 
   useEffect(() => {
     const updateSlidersPerView = () => {
@@ -64,6 +73,10 @@ const SwiperEpicure = ({ card }: CardProps) => {
     };
   }, []);
 
+  if (!cardsData || cardsData.length === 0) {
+    return <div>No data available</div>;
+  }
+
   return (
     <>
       {showSwiper ? (
@@ -72,17 +85,29 @@ const SwiperEpicure = ({ card }: CardProps) => {
           slidesPerView={slidersPerView}
           navigation
         >
-          <SwiperSlide>{card}</SwiperSlide>
-          <SwiperSlide>{card}</SwiperSlide>
-          <SwiperSlide>{card}</SwiperSlide>
-          <SwiperSlide>{card}</SwiperSlide>
-          <SwiperSlide>{card}</SwiperSlide>
+          {cardsData.map((cardData, index) => (
+            <SwiperSlide key={index}>
+              <Card
+                image={cardData.image}
+                title={cardData.title}
+                BottomComponent={cardData.BottomComponent}
+                bottomComponentProps={cardData.bottomComponentProps}
+              />
+            </SwiperSlide>
+          ))}
         </StyledSwiper>
       ) : (
         <StyledDisplayCardsContainer>
-          <StyledCardContainerSwiper>{card}</StyledCardContainerSwiper>
-          <StyledCardContainerSwiper>{card}</StyledCardContainerSwiper>
-          <StyledCardContainerSwiper>{card}</StyledCardContainerSwiper>
+          {cardsData.slice(0, 3).map((cardData, index) => (
+            <StyledCardContainerSwiper key={index}>
+              <Card
+                image={cardData.image}
+                title={cardData.title}
+                BottomComponent={cardData.BottomComponent}
+                bottomComponentProps={cardData.bottomComponentProps}
+              />
+            </StyledCardContainerSwiper>
+          ))}
         </StyledDisplayCardsContainer>
       )}
     </>

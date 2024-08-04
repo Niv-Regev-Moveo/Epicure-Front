@@ -56,13 +56,12 @@ export const OpenHamburgerLinksButton = styled.button`
 export const NavBarExtendContainer = styled.nav<NavBarProps>`
   display: flex;
   flex-direction: column;
-  margin-left: 24px;
   padding-top: 10px;
   font-weight: 200;
   height: 320px;
   letter-spacing: ${letterSpacing.small};
   font-size: ${fontSizes.medium};
-  z-index: ${(props) => (props.extendNavBar ? "1000" : "-1")};
+  z-index: ${(props) => (props.extendNavBar ? "10" : "-1")};
   box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.05);
 
   @media (min-width: ${screenSizes.medium}) {
@@ -93,7 +92,7 @@ export const StyledBottomNavBarBorder = styled.div`
   padding-top: 5px;
 `;
 
-export const ClosedHamburgerLinkButton = styled.button`
+export const StyledClosedHamburgerLinkButton = styled.button`
   width: 24px;
   height: 24px;
   color: ${colors.primary};

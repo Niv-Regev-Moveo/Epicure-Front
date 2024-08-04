@@ -1,3 +1,4 @@
+import { useDispatch, useSelector } from "react-redux";
 import SearchBar from "../../components/Common/SearchBar";
 import AboutSection from "../../components/Sections/AboutSection";
 import ChefOfTheWeekSection from "../../components/Sections/ChefOfTheWeekSection";
@@ -6,8 +7,31 @@ import DishesSection from "../../components/Sections/DishesSection";
 import IconsMeaningSections from "../../components/Sections/IconsMeaningSections";
 import RestaurantsSection from "../../components/Sections/RestaurantsSection";
 import { StyledMainPageContainer } from "./styles";
+import { AppDispatch, RootState } from "../../redux/store/store";
+import { useEffect } from "react";
+import { fetchChefs } from "../../redux/chunk/collections/chefs/chefs.thunks";
+import { fetchRestaurants } from "../../redux/chunk/collections/restaurants/restaurants.thunks";
+import {
+  fetchDishes,
+  fetchSignatureDishes,
+} from "../../redux/chunk/collections/dishes/dishes.thunks";
+import { fetchChefOfTheWeek } from "../../redux/chunk/collections/chefOfTheWeek/chefOfTheWeek.thunks";
 
 const HomePage = () => {
+  const dispatch = useDispatch<AppDispatch>();
+
+  const chefOfTheWeekState = useSelector(
+    (state: RootState) => state.chefOfTheWeekState
+  );
+
+  useEffect(() => {
+    dispatch(fetchChefs());
+    dispatch(fetchRestaurants());
+    dispatch(fetchDishes());
+    dispatch(fetchSignatureDishes());
+    dispatch(fetchChefOfTheWeek());
+  }, [dispatch]);
+
   return (
     <StyledMainPageContainer>
       <SearchBar />
@@ -15,11 +39,9 @@ const HomePage = () => {
       <DishesSection />
       <IconsMeaningSections />
       <ChefOfTheWeekSection
-        image={"Chef Image"}
-        ChefName={"Yossi Shitrit"}
-        text={
-          "Chef Yossi Shitrit has been living and breathing his culinary dreams for more than two decades, including running the kitchen in his first restaurant, the fondly-remembered Violet, located in Moshav  Udim. Shitrit's creativity and culinary  acumen born of long experience  are expressed in the every detail of each and every dish."
-        }
+        image={chefOfTheWeekState.chefOfTheWeek?.image}
+        name={chefOfTheWeekState.chefOfTheWeek?.name}
+        description={chefOfTheWeekState.chefOfTheWeek?.description}
       />
       <ChefSection />
       <AboutSection />

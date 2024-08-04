@@ -1,28 +1,38 @@
+// src/components/Common/Card/Card.tsx
+import React from "react";
 import {
+  StyledCardContainer,
   StyledCardImg,
   StyledCardImgContainer,
-  StyledName,
   StyledCardNameChef,
-  StyledCardContainer,
+  StyledName,
   StyledBottomComponent,
 } from "./Styles";
 
-interface CardProps {
-  title: string;
+interface CardProps<T extends JSX.IntrinsicAttributes> {
   image: string;
-  bottomComponent?: JSX.Element;
+  title: string;
+  BottomComponent: React.FC<T>;
+  bottomComponentProps: T;
 }
 
-const Card = ({ title, image, bottomComponent }: CardProps) => {
+const Card = <T extends JSX.IntrinsicAttributes>({
+  image,
+  title,
+  BottomComponent,
+  bottomComponentProps,
+}: CardProps<T>) => {
   return (
     <StyledCardContainer>
       <StyledCardImgContainer>
-        <StyledCardImg src={image} alt="" />
+        <StyledCardImg src={image} alt={title} />
       </StyledCardImgContainer>
       <StyledCardNameChef>
         <StyledName>{title}</StyledName>
-        {bottomComponent && (
-          <StyledBottomComponent>{bottomComponent}</StyledBottomComponent>
+        {BottomComponent && (
+          <StyledBottomComponent>
+            <BottomComponent {...bottomComponentProps} />
+          </StyledBottomComponent>
         )}
       </StyledCardNameChef>
     </StyledCardContainer>

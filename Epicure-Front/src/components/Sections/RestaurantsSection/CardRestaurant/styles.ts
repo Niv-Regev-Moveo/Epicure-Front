@@ -42,17 +42,7 @@ export const StyledChefName = styled.h5`
   }
 `;
 
-export const StyledStarsImage = styled.img`
-  display: none;
-
-  @media (min-width: ${screenSizes.medium}) {
-    display: block;
-    width: 200px;
-    height: 40px;
-    padding-bottom: 10px;
-  }
-
-  @media (min-width: ${screenSizes.large}) {
-    width: 216px;
-  }
+export const StyledStarsContainer = styled.div`
+  display: flex;
+  margin-bottom: 20px;
 `;
