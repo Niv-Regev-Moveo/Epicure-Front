@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./Pages/HomePage";
 import Header from "./components/Sections/Header";
 import Footer from "./components/Sections/Footer";
+import RestaurantsPage from "./Pages/RestaurantsPage";
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
         </StyledHeaderContainer>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/Restaurant" />
+          <Route path="/Restaurants" element={<RestaurantsPage />} />
           <Route path="/Contact-Us" />
         </Routes>
         <Footer />
