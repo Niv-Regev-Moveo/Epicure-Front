@@ -14,6 +14,7 @@ import {
 } from "./styles";
 import HamburgerSVG from "../../../../assets/Icons/HamburgerSVG";
 import LogoNavBarSVG from "../../../../assets/Icons/LogoNavBarSVG";
+import RestaurantsPage from "../../../../Pages/RestaurantsPage";
 
 const NavBar = () => {
   const [extendNavBar, setExtendNavBar] = useState(false);
