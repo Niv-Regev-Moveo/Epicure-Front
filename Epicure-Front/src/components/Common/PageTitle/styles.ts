@@ -10,6 +10,7 @@ export const StyledPageTitleContainer = styled.div`
     display: none;
   }
 `;
+
 export const StyledPageTitle = styled.h3`
   font-size: ${fontSizes.medium18};
   font-weight: 200;

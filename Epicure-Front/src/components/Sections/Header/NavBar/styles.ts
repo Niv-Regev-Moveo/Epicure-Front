@@ -74,7 +74,7 @@ export const OpenHamburgerLinksButton = styled.button`
   font-size: ${fontSizes.large};
   border: none;
   cursor: pointer;
-  margin-left: 15px;
+  margin-left: 10px;
   padding-bottom: 0px;
   display: block;
 

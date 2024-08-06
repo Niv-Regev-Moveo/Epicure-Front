@@ -14,13 +14,13 @@ export const StyledHeaderIconsContainer = styled.nav`
 `;
 
 export const StyledHeaderIconsIcon = styled.i`
-  padding: 7px;
+  padding: 5px;
 
   @media (min-width: ${screenSizes.small}) {
-    padding: 9px;
+    padding: 7px;
   }
 
   @media (min-width: ${screenSizes.small}) {
-    padding: 12px;
+    padding: 10px;
   }
 `;

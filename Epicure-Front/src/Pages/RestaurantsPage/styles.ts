@@ -11,7 +11,7 @@ export const StyledRestaurantsPageContainer = styled.div`
 
   @media (max-width: ${screenSizes.large}) {
     gap: 40px;
-    max-width: 85%;
+    max-width: 87%;
   }
 
   @media (min-width: ${screenSizes.small}) {

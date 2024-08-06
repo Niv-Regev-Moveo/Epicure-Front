@@ -19,14 +19,10 @@ export const StyledHeaderContainer = styled.header`
   background-color: ${backgroundColors.primary};
   position: sticky;
   height: 46px;
-  border-bottom: 1px solid ${colors.navBarBorder};
 
   @media (min-width: ${screenSizes.medium}) {
     height: 64px;
-  }
-
-  @media (min-width: ${screenSizes.medium}) {
-    height: 64px;
+    border-bottom: 1px solid ${colors.navBarBorder};
   }
 `;
 
@@ -36,6 +32,10 @@ export const StyledHeaderLogo = styled.span`
 
   @media (min-width: ${screenSizes.medium}) {
     display: none;
+  }
+
+  @media (max-width: ${screenSizes.small}) {
+    padding-left: 100%;
   }
 `;
 
@@ -64,6 +64,9 @@ export const StyledRightContainer = styled.div`
   justify-content: flex-end;
   min-width: 180px;
 
+  @media (min-width: ${screenSizes.small}) {
+    padding-right: 2%;
+  }
   @media (min-width: ${screenSizes.medium}) {
     padding-right: 5%;
   }
