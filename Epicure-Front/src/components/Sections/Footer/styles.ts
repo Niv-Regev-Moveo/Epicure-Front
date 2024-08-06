@@ -21,6 +21,7 @@ export const StyledFooterContainer = styled.footer`
     justify-content: center;
     padding: 0;
     margin-left: auto;
+    width: none;
   }
 `;
 

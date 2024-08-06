@@ -1,4 +1,3 @@
-// src/components/Common/Card/Card.tsx
 import React from "react";
 import {
   StyledCardContainer,
@@ -12,8 +11,9 @@ import {
 interface CardProps<T extends JSX.IntrinsicAttributes> {
   image: string;
   title: string;
-  BottomComponent: React.FC<T>;
+  BottomComponent?: React.FC<T>;
   bottomComponentProps: T;
+  restaurantPageStyle?: boolean;
 }
 
 const Card = <T extends JSX.IntrinsicAttributes>({
@@ -21,9 +21,10 @@ const Card = <T extends JSX.IntrinsicAttributes>({
   title,
   BottomComponent,
   bottomComponentProps,
+  restaurantPageStyle = false,
 }: CardProps<T>) => {
   return (
-    <StyledCardContainer>
+    <StyledCardContainer restaurantPageStyle={restaurantPageStyle}>
       <StyledCardImgContainer>
         <StyledCardImg src={image} alt={title} />
       </StyledCardImgContainer>

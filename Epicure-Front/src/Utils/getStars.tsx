@@ -1,4 +1,3 @@
-// src/utils/getStars.tsx
 import FullStar from "../assets/Photos/Star.png";
 import EmptyStar from "../assets/Photos/EmptyStar.png";
 

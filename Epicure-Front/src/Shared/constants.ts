@@ -5,6 +5,7 @@ export const fontSizes: Record<string, string> = {
   medium18: "18px",
   large: "20px",
   xlLarge: "24px",
+  bigLarge: "27px",
   big: "30px",
   xlxLarge: "32px",
   Giant: "40px",
@@ -24,8 +25,10 @@ export const colors: Record<string, string> = {
 
 export const screenSizes: Record<string, string> = {
   small: "375px",
+  compact: "550px",
   medium: "600px",
   large: "900px",
+  xLarge: "950px",
   big: "1440px",
 };
 
