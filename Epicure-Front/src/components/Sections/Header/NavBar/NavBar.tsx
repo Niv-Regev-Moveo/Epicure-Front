@@ -14,7 +14,7 @@ import {
 } from "./styles";
 import HamburgerSVG from "../../../../assets/Icons/HamburgerSVG";
 import LogoNavBarSVG from "../../../../assets/Icons/LogoNavBarSVG";
-import { Link, useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 const NavBar = () => {
   const [extendNavBar, setExtendNavBar] = useState(false);
@@ -45,13 +45,13 @@ const NavBar = () => {
                   <StyledTopNavBarBorder>
                     <NavBarLinkExtended
                       to={"/Restaurants"}
-                      isActive={isActiveLink("/Restaurants")}
+                      isCurrentPage={isActiveLink("/Restaurants")}
                     >
                       Restaurants
                     </NavBarLinkExtended>
                     <NavBarLinkExtended
                       to={"/Chefs"}
-                      isActive={isActiveLink("/Chefs")}
+                      isCurrentPage={isActiveLink("/Chefs")}
                     >
                       Chefs
                     </NavBarLinkExtended>
@@ -59,19 +59,19 @@ const NavBar = () => {
                   <StyledBottomNavBarBorder>
                     <NavBarLinkExtended
                       to={"/Contact-use"}
-                      isActive={isActiveLink("/Contact-use")}
+                      isCurrentPage={isActiveLink("/Contact-use")}
                     >
                       Contact use
                     </NavBarLinkExtended>
                     <NavBarLinkExtended
                       to={"/Term-Of-Use"}
-                      isActive={isActiveLink("/Term-Of-Use")}
+                      isCurrentPage={isActiveLink("/Term-Of-Use")}
                     >
                       Term Of Use
                     </NavBarLinkExtended>
                     <NavBarLinkExtended
                       to={"/Privacy-Policy"}
-                      isActive={isActiveLink("/Privacy-Policy")}
+                      isCurrentPage={isActiveLink("/Privacy-Policy")}
                     >
                       Privacy Policy
                     </NavBarLinkExtended>
@@ -88,19 +88,19 @@ const NavBar = () => {
           </StyledBigScreenNavBar>
 
           <StyledLeftLogoNavBarContainer>
-            <Link to={"/"}>
+            <NavLink to={"/"}>
               <LogoNavBarSVG />
-            </Link>
+            </NavLink>
           </StyledLeftLogoNavBarContainer>
 
           <StyledEpicureLogoTitle />
           <NavBarLink
             to={"/Restaurants"}
-            isActive={isActiveLink("/Restaurants")}
+            isCurrentPage={isActiveLink("/Restaurants")}
           >
             Restaurants
           </NavBarLink>
-          <NavBarLink to={"/Chefs"} isActive={isActiveLink("/Chefs")}>
+          <NavBarLink to={"/Chefs"} isCurrentPage={isActiveLink("/Chefs")}>
             Chefs
           </NavBarLink>
         </>

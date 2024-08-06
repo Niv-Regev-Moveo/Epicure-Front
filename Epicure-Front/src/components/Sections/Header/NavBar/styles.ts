@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import {
   fontSizes,
   backgroundColors,
@@ -36,10 +36,10 @@ export const activeLinkStyle = css`
 `;
 
 interface NavBarLinkProps {
-  isActive: boolean;
+  isCurrentPage: boolean;
 }
 
-export const NavBarLink = styled(Link)<NavBarLinkProps>`
+export const NavBarLink = styled(NavLink)<NavBarLinkProps>`
   display: none;
 
   @media (min-width: ${screenSizes.medium}) {
@@ -49,7 +49,7 @@ export const NavBarLink = styled(Link)<NavBarLinkProps>`
     text-decoration: none;
     font-weight: 200;
     letter-spacing: ${letterSpacing.large};
-    ${(props) => props.isActive && activeLinkStyle};
+    ${(props) => props.isCurrentPage && activeLinkStyle};
   }
   @media (min-width: ${screenSizes.large}) {
     display: block;
@@ -57,14 +57,14 @@ export const NavBarLink = styled(Link)<NavBarLinkProps>`
   }
 `;
 
-export const NavBarLinkExtended = styled(Link)<NavBarLinkProps>`
+export const NavBarLinkExtended = styled(NavLink)<NavBarLinkProps>`
   color: ${colors.primary};
   text-decoration: none;
   padding-top: 15px;
   padding-bottom: 15px;
   margin-bottom: 5px;
   cursor: pointer;
-  ${(props) => props.isActive && activeLinkStyle};
+  ${(props) => props.isCurrentPage && activeLinkStyle};
 `;
 
 export const OpenHamburgerLinksButton = styled.button`
