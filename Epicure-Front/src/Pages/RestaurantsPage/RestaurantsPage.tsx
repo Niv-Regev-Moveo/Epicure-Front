@@ -1,3 +1,4 @@
+// src/Pages/RestaurantsPage/RestaurantsPage.tsx
 import { useEffect, useMemo } from "react";
 import Card from "../../components/Common/Card";
 import { useDispatch, useSelector } from "react-redux";
@@ -6,6 +7,7 @@ import { fetchRestaurants } from "../../redux/chunk/collections/restaurants/rest
 import { CardRestaurantProps } from "../../redux/chunk/collections/restaurants/restaurants.types";
 import CardRestaurant from "../../components/Sections/RestaurantsSection/CardRestaurant";
 import { StyledCardWrapper, StyledRestaurantsPageContainer } from "./styles";
+import PageTitle from "../../components/Common/PageTitle";
 
 const RestaurantsPage = () => {
   const dispatch = useDispatch<AppDispatch>();
@@ -38,6 +40,7 @@ const RestaurantsPage = () => {
   }
   return (
     <StyledRestaurantsPageContainer>
+      <PageTitle title={"RESTAURANTS"} />
       {restaurantCardsData.map((cardData, index) => (
         <StyledCardWrapper key={index}>
           <Card

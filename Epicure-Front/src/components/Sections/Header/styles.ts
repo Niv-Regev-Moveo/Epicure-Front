@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import {
   backgroundColors,
+  colors,
   fontSizes,
   screenSizes,
 } from "../../../Shared/constants";
@@ -18,6 +19,11 @@ export const StyledHeaderContainer = styled.header`
   background-color: ${backgroundColors.primary};
   position: sticky;
   height: 46px;
+  border-bottom: 1px solid ${colors.navBarBorder};
+
+  @media (min-width: ${screenSizes.medium}) {
+    height: 64px;
+  }
 
   @media (min-width: ${screenSizes.medium}) {
     height: 64px;
@@ -48,7 +54,7 @@ export const StyledLeftContainer = styled.div`
     padding-left: 5%;
   }
   @media (min-width: ${screenSizes.medium}) {
-    padding-left: 7%;
+    padding-left: 9.8%;
   }
 `;
 

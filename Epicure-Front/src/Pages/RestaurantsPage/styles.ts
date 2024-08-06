@@ -13,6 +13,10 @@ export const StyledRestaurantsPageContainer = styled.div`
     gap: 40px;
     max-width: 85%;
   }
+
+  @media (min-width: ${screenSizes.small}) {
+    gap: 25px;
+  }
 `;
 
 export const StyledCardWrapper = styled.div`

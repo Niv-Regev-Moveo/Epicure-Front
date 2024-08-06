@@ -21,10 +21,12 @@ export const colors: Record<string, string> = {
   primary: "black",
   secondary: "white",
   navBarBorder: "#f2f2f2",
+  stars: "#e09200",
 };
 
 export const screenSizes: Record<string, string> = {
   small: "375px",
+  mobileBreakPoint: "376px",
   compact: "550px",
   medium: "600px",
   large: "900px",

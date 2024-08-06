@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { Link } from "react-router-dom";
 import {
   fontSizes,
@@ -11,6 +11,7 @@ import {
 interface NavBarProps {
   extendNavBar: boolean;
 }
+
 export const StyledNavBarLinkContainer = styled.nav<NavBarProps>`
   display: flex;
   flex-direction: column;
@@ -20,7 +21,25 @@ export const StyledNavBarLinkContainer = styled.nav<NavBarProps>`
   top: 5px;
 `;
 
-export const NavBarLink = styled(Link)`
+export const activeLinkStyle = css`
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1.8px;
+    background-color: ${colors.stars};
+    bottom: -8px;
+    left: 0;
+  }
+`;
+
+interface NavBarLinkProps {
+  isActive: boolean;
+}
+
+export const NavBarLink = styled(Link)<NavBarLinkProps>`
   display: none;
 
   @media (min-width: ${screenSizes.medium}) {
@@ -29,6 +48,8 @@ export const NavBarLink = styled(Link)`
     margin: 10px;
     text-decoration: none;
     font-weight: 200;
+    letter-spacing: ${letterSpacing.large};
+    ${(props) => props.isActive && activeLinkStyle};
   }
   @media (min-width: ${screenSizes.large}) {
     display: block;
@@ -36,23 +57,32 @@ export const NavBarLink = styled(Link)`
   }
 `;
 
+export const NavBarLinkExtended = styled(Link)<NavBarLinkProps>`
+  color: ${colors.primary};
+  text-decoration: none;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  ${(props) => props.isActive && activeLinkStyle};
+`;
+
 export const OpenHamburgerLinksButton = styled.button`
   height: 24px;
   color: ${colors.primary};
   background-color: ${backgroundColors.primary};
-  color: ${colors.primary};
   font-size: ${fontSizes.large};
   border: none;
   cursor: pointer;
   margin-left: 15px;
   padding-bottom: 0px;
-  font-size: ${fontSizes.large};
   display: block;
 
   @media (min-width: ${screenSizes.medium}) {
     display: none;
   }
 `;
+
 export const NavBarExtendContainer = styled.nav<NavBarProps>`
   display: flex;
   flex-direction: column;
@@ -67,15 +97,6 @@ export const NavBarExtendContainer = styled.nav<NavBarProps>`
   @media (min-width: ${screenSizes.medium}) {
     display: none;
   }
-`;
-
-export const NavBarLinkExtended = styled(Link)`
-  color: ${colors.primary};
-  text-decoration: none;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  margin-bottom: 5px;
-  cursor: pointer;
 `;
 
 export const StyledTopNavBarBorder = styled.div`
@@ -97,7 +118,6 @@ export const StyledClosedHamburgerLinkButton = styled.button`
   height: 24px;
   color: ${colors.primary};
   background-color: ${backgroundColors.primary};
-  color: ${colors.primary};
   font-size: ${fontSizes.large};
   border: none;
   cursor: pointer;
