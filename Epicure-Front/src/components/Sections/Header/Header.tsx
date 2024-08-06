@@ -9,7 +9,7 @@ import {
 import NavBar from "./NavBar";
 import HeaderIcons from "./HeaderIcons";
 import LogoSVG from "../../../assets/Icons/LogoSVG";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -19,9 +19,9 @@ const Header = () => {
       </StyledLeftContainer>
       <StyledCenterContainer>
         <StyledHeaderLogo>
-          <Link to={"/"}>
+          <NavLink to={"/"}>
             <LogoSVG />
-          </Link>
+          </NavLink>
         </StyledHeaderLogo>
       </StyledCenterContainer>
       <StyledRightContainer>
