@@ -37,7 +37,7 @@ export const screenSizes: Record<string, string> = {
 export const letterSpacing: Record<string, string> = {
   small: "1.25px",
   medium: "1.5px",
-  large: "2px",
+  large: "1.92px",
 };
 
 export const breakPointsSwiper: Record<string, string> = {

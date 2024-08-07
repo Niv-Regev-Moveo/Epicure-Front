@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { screenSizes } from "../../Shared/constants";
+import { backgroundColors, screenSizes } from "../../Shared/constants";
 export const StyledPageContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -8,6 +8,7 @@ export const StyledPageContainer = styled.div`
   margin: 0 auto;
   padding: 20px;
   gap: 20px;
+  background-color: ${backgroundColors.secondary};
 
   @media (max-width: ${screenSizes.large}) {
     gap: 40px;

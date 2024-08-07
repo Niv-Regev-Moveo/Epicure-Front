@@ -10,13 +10,14 @@ export const StyledPageContainer = styled.div`
   padding: 20px;
   gap: 20px;
 
+  @media (min-width: ${screenSizes.big}) {
+    gap: 15px;
+    justify-content: space-around;
+  }
   @media (max-width: ${screenSizes.large}) {
     gap: 40px;
     max-width: 87%;
-  }
-
-  @media (min-width: ${screenSizes.small}) {
-    gap: 15px;
+    justify-content: center;
   }
 `;
 export const StyledCardWrapper = styled.div`

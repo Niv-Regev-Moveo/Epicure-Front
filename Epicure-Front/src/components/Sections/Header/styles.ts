@@ -19,6 +19,7 @@ export const StyledHeaderContainer = styled.header`
   background-color: ${backgroundColors.primary};
   position: sticky;
   height: 46px;
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.07);
 
   @media (min-width: ${screenSizes.medium}) {
     height: 64px;
