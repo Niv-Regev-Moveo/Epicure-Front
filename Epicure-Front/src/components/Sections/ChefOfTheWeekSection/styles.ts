@@ -49,7 +49,6 @@ export const StyledCOTWContainer = styled.div`
 
   @media (min-width: ${screenSizes.big}) {
     justify-content: center;
-    /* padding-left: 200px; */
     padding-top: 30px;
     margin-left: 40px;
   }
