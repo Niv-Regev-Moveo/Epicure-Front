@@ -45,8 +45,3 @@ export const StyledCardWrapper = styled.div`
     max-width: 335px;
   }
 `;
-
-/* @media (max-width: ${screenSizes.large}) {
-  flex: 1 1 calc(50% - 40px);
-  max-width: calc(50% - 40px);
-} */
