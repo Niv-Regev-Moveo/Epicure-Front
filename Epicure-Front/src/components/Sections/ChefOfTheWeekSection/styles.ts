@@ -49,7 +49,6 @@ export const StyledCOTWContainer = styled.div`
 
   @media (min-width: ${screenSizes.big}) {
     justify-content: center;
-    /* padding-left: 200px; */
     padding-top: 30px;
     margin-left: 40px;
   }
@@ -129,6 +128,7 @@ export const StyledChefNameTitle = styled.h3`
   position: absolute;
   bottom: 0;
   width: 100%;
+
   height: 51px;
   background-color: rgba(255, 255, 255, 0.7);
   padding-top: 18px;

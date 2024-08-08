@@ -26,7 +26,11 @@ const Card = <T extends JSX.IntrinsicAttributes>({
   return (
     <StyledCardContainer restaurantPageStyle={restaurantPageStyle}>
       <StyledCardImgContainer>
-        <StyledCardImg src={image} alt={title} />
+        <StyledCardImg
+          src={image}
+          alt={title}
+          restaurantPageStyle={restaurantPageStyle}
+        />
       </StyledCardImgContainer>
       <StyledCardNameChef>
         <StyledName>{title}</StyledName>

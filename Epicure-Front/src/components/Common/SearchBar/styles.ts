@@ -5,7 +5,7 @@ import {
   letterSpacing,
   screenSizes,
 } from "../../../Shared/constants";
-// added StyledDropdown and StyledDropdownItem
+
 export const StyledDropdown = styled.div`
   position: absolute;
   top: 100%;
@@ -192,6 +192,7 @@ export const StyledSearchImg = styled.img`
   height: auto;
   max-width: 100%;
 
-  @media (min-width: ${screenSizes.medium}) {
+  @media (min-width: ${screenSizes.small}) {
+    min-height: 273px;
   }
 `;

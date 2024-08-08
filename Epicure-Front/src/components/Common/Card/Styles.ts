@@ -10,6 +10,10 @@ interface StyledCardContainerProps {
   restaurantPageStyle?: boolean;
 }
 
+interface StyledCardImgProps {
+  restaurantPageStyle?: boolean;
+}
+
 export const StyledCardContainer = styled.div<StyledCardContainerProps>`
   width: 245px;
   background-color: ${backgroundColors.cards};
@@ -45,7 +49,7 @@ export const StyledCardNameChef = styled.div`
   min-height: 81px;
 `;
 
-export const StyledCardImg = styled.img<StyledCardContainerProps>`
+export const StyledCardImg = styled.img<StyledCardImgProps>`
   width: 100%;
   object-fit: cover;
   height: 151px;
@@ -57,7 +61,7 @@ export const StyledCardImg = styled.img<StyledCardContainerProps>`
   ${({ restaurantPageStyle }) =>
     restaurantPageStyle &&
     css`
-      @media (max-width: ${screenSizes.medium}) {
+      @media (max-width: ${screenSizes.small}) {
         height: 207px;
       }
     `}
