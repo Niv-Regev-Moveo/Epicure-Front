@@ -1,5 +1,9 @@
 import styled from "styled-components";
-import { fontSizes, letterSpacing } from "../../../Shared/constants";
+import {
+  fontSizes,
+  letterSpacing,
+  screenSizes,
+} from "../../../Shared/constants";
 
 export const StyledPageTitleContainer = styled.div`
   display: flex;
@@ -7,6 +11,10 @@ export const StyledPageTitleContainer = styled.div`
   justify-content: start;
 
   @media (min-width: 376px) {
+    justify-content: center;
+  }
+
+  @media (min-width: ${screenSizes.medium}) {
     display: none;
   }
 `;

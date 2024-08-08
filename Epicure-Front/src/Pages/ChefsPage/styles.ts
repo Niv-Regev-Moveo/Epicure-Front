@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { screenSizes } from "../../Shared/constants";
+
 export const StyledPageContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -15,27 +16,25 @@ export const StyledPageContainer = styled.div`
   }
 
   @media (min-width: ${screenSizes.small}) {
-    gap: 25px;
+    gap: 15px;
   }
 `;
-
 export const StyledCardWrapper = styled.div`
-  flex: 1 1 calc(33.333% - 40px);
-  max-width: calc(33.333% - 40px);
   display: flex;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  padding-bottom: 10px;
 
-  @media (max-width: ${screenSizes.large}) {
-    flex: 1 1 calc(50% - 40px);
-    max-width: calc(50% - 40px);
-  }
   @media (min-width: ${screenSizes.large}) {
+    flex: 1 1 calc(50% - 0px);
+    max-width: calc(50% - 20px);
+  }
+
+  @media (min-width: ${screenSizes.big}) {
     flex: 1 1 calc(33.333% - 0px);
     max-width: calc(33.333% - 20px);
   }
+
   @media (max-width: ${screenSizes.medium}) {
     flex: 1 1 calc(80% - 40px);
     max-width: calc(80% - 40px);
