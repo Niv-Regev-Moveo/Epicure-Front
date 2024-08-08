@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import {
   backgroundColors,
   fontSizes,
@@ -6,7 +6,15 @@ import {
   screenSizes,
 } from "../../../Shared/constants";
 
-export const StyledCardContainer = styled.div`
+interface StyledCardContainerProps {
+  restaurantPageStyle?: boolean;
+}
+
+interface StyledCardImgProps {
+  restaurantPageStyle?: boolean;
+}
+
+export const StyledCardContainer = styled.div<StyledCardContainerProps>`
   width: 245px;
   background-color: ${backgroundColors.cards};
 
@@ -23,6 +31,16 @@ export const StyledCardContainer = styled.div`
     min-width: 379px;
     min-height: 404px;
   }
+
+  ${({ restaurantPageStyle }) =>
+    restaurantPageStyle &&
+    css`
+      width: 335px;
+
+      @media (max-width: ${screenSizes.medium}) {
+        width: 335px;
+      }
+    `}
 `;
 
 export const StyledCardNameChef = styled.div`
@@ -31,7 +49,7 @@ export const StyledCardNameChef = styled.div`
   min-height: 81px;
 `;
 
-export const StyledCardImg = styled.img`
+export const StyledCardImg = styled.img<StyledCardImgProps>`
   width: 100%;
   object-fit: cover;
   height: 151px;
@@ -39,6 +57,14 @@ export const StyledCardImg = styled.img`
   @media (min-width: ${screenSizes.big}) {
     height: 236px;
   }
+
+  ${({ restaurantPageStyle }) =>
+    restaurantPageStyle &&
+    css`
+      @media (max-width: ${screenSizes.small}) {
+        height: 207px;
+      }
+    `}
 `;
 
 export const StyledName = styled.h3`
@@ -57,7 +83,7 @@ export const StyledName = styled.h3`
   }
 
   @media (min-width: ${screenSizes.large}) {
-    font-size: ${fontSizes.xlxLarge};
+    font-size: ${fontSizes.bigLarge};
   }
   @media (min-width: ${screenSizes.big}) {
     font-size: ${fontSizes.Giant};

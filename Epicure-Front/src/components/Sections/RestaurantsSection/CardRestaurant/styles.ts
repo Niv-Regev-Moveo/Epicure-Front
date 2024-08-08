@@ -9,7 +9,7 @@ export const StyledCardRestaurantContainer = styled.div`
   display: flex;
   flex-direction: column;
 
-  width: 245px;
+  /* width: 245px; */
 
   @media (min-width: ${screenSizes.medium}) {
     align-items: center;
@@ -45,4 +45,9 @@ export const StyledChefName = styled.h5`
 export const StyledStarsContainer = styled.div`
   display: flex;
   margin-bottom: 20px;
+  justify-content: center;
+
+  @media (max-width: ${screenSizes.medium}) {
+    display: none;
+  }
 `;

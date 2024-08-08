@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import {
   backgroundColors,
+  colors,
   fontSizes,
   screenSizes,
 } from "../../../Shared/constants";
@@ -21,6 +22,7 @@ export const StyledHeaderContainer = styled.header`
 
   @media (min-width: ${screenSizes.medium}) {
     height: 64px;
+    border-bottom: 1px solid ${colors.navBarBorder};
   }
 `;
 
@@ -30,6 +32,10 @@ export const StyledHeaderLogo = styled.span`
 
   @media (min-width: ${screenSizes.medium}) {
     display: none;
+  }
+
+  @media (max-width: ${screenSizes.small}) {
+    padding-left: 100%;
   }
 `;
 
@@ -48,7 +54,7 @@ export const StyledLeftContainer = styled.div`
     padding-left: 5%;
   }
   @media (min-width: ${screenSizes.medium}) {
-    padding-left: 7%;
+    padding-left: 9.8%;
   }
 `;
 
@@ -58,6 +64,9 @@ export const StyledRightContainer = styled.div`
   justify-content: flex-end;
   min-width: 180px;
 
+  @media (min-width: ${screenSizes.small}) {
+    padding-right: 2%;
+  }
   @media (min-width: ${screenSizes.medium}) {
     padding-right: 5%;
   }
