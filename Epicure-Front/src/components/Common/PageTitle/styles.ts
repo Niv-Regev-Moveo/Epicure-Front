@@ -9,6 +9,7 @@ export const StyledPageTitleContainer = styled.div`
   display: flex;
   width: 100%;
   justify-content: start;
+  padding-top: 20px;
 
   @media (min-width: 376px) {
     justify-content: center;

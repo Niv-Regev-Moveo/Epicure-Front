@@ -7,6 +7,7 @@ import { CardRestaurantProps } from "../../redux/chunk/collections/restaurants/r
 import CardRestaurant from "../../components/Sections/RestaurantsSection/CardRestaurant";
 import { StyledCardWrapper, StyledPageContainer } from "./styles";
 import PageTitle from "../../components/Common/PageTitle";
+import CategoriesBar from "../../components/Common/CategoriesBar";
 
 const RestaurantsPage = () => {
   const dispatch = useDispatch<AppDispatch>();
@@ -37,9 +38,12 @@ const RestaurantsPage = () => {
   if (error) {
     return <div>Error: {error}</div>;
   }
+
+  const categories = ["All", "New", "Most Popular", "Open Now", "Must Viewed"];
   return (
     <StyledPageContainer>
       <PageTitle title={"RESTAURANTS"} />
+      <CategoriesBar categories={categories} />
       {restaurantCardsData.map((cardData, index) => (
         <StyledCardWrapper key={index}>
           <Card
