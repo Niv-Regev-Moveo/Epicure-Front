@@ -9,5 +9,6 @@ export const StyledGlobalContainer = styled.div`
 `;
 
 export const StyledHeaderContainer = styled.div`
+  position: relative;
   z-index: 100;
 `;

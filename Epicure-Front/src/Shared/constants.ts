@@ -15,6 +15,9 @@ export const backgroundColors: Record<string, string> = {
   primary: "white",
   secondary: "#FAFAFA",
   cards: "#F9F4EA",
+  formButtonGrey: "#969696",
+  formButtonBlack: "#FAFAFA",
+  formButtonWhite: "white",
 };
 
 export const colors: Record<string, string> = {
@@ -22,6 +25,7 @@ export const colors: Record<string, string> = {
   secondary: "white",
   navBarBorder: "#f2f2f2",
   stars: "#e09200",
+  separationText: "#979797",
 };
 
 export const screenSizes: Record<string, string> = {
@@ -38,6 +42,7 @@ export const letterSpacing: Record<string, string> = {
   small: "1.25px",
   medium: "1.5px",
   large: "1.92px",
+  big: "2.67px",
 };
 
 export const breakPointsSwiper: Record<string, string> = {

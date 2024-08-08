@@ -1,9 +1,17 @@
+import { useState } from "react";
 import BagSVG from "../../../../assets/Icons/BagSVG";
 import SearchSVG from "../../../../assets/Icons/SearchSVG";
 import UserSVG from "../../../../assets/Icons/UserSVG";
 import { StyledHeaderIconsContainer, StyledHeaderIconsIcon } from "./styles";
+import MobileIconPopUp from "../../../../components/Common/MobileIconPopUp";
 
 const HeaderIcons = () => {
+  const [isPopupVisible, setIsPopupVisible] = useState(false);
+
+  const togglePopupVisibility = () => {
+    setIsPopupVisible(!isPopupVisible);
+  };
+
   return (
     <StyledHeaderIconsContainer>
       <a href="">
@@ -11,7 +19,13 @@ const HeaderIcons = () => {
           <SearchSVG />
         </StyledHeaderIconsIcon>
       </a>
-      <a href="">
+      <a
+        href=""
+        onClick={(e) => {
+          e.preventDefault();
+          togglePopupVisibility();
+        }}
+      >
         <StyledHeaderIconsIcon>
           <UserSVG />
         </StyledHeaderIconsIcon>
@@ -21,6 +35,7 @@ const HeaderIcons = () => {
           <BagSVG />
         </StyledHeaderIconsIcon>
       </a>
+      {isPopupVisible && <MobileIconPopUp onClose={togglePopupVisibility} />}
     </StyledHeaderIconsContainer>
   );
 };
