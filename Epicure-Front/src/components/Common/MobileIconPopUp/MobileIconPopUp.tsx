@@ -4,6 +4,7 @@ import {
   StyledCloseButtonContainer,
   StyledFormContainer,
   StyledMobileIconPopUpContainer,
+  StyledWrapperContainer,
 } from "./styles";
 import SignIn from "../../Sections/SignIn";
 
@@ -14,12 +15,14 @@ interface MobileIconPopUpProps {
 const MobileIconPopUp: React.FC<MobileIconPopUpProps> = ({ onClose }) => {
   return (
     <StyledMobileIconPopUpContainer>
-      <StyledCloseButtonContainer>
-        <CloseButton onClick={onClose} color={"white"} />
-      </StyledCloseButtonContainer>
-      <StyledFormContainer>
-        <SignIn />
-      </StyledFormContainer>
+      <StyledWrapperContainer>
+        <StyledCloseButtonContainer>
+          <CloseButton onClick={onClose} color={"white"} />
+        </StyledCloseButtonContainer>
+        <StyledFormContainer>
+          <SignIn onClose={onClose} />
+        </StyledFormContainer>
+      </StyledWrapperContainer>
     </StyledMobileIconPopUpContainer>
   );
 };

@@ -11,7 +11,14 @@ export const StyledCloseButton = styled.button`
   color: ${colors.primary};
 
   @media (min-width: ${screenSizes.medium}) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: ${colors.secondary};
     background-color: ${colors.primary};
+    padding-left: 0;
+    padding-top: 0;
+    width: 35px;
+    height: 35px;
   }
 `;

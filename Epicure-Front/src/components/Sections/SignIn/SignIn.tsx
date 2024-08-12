@@ -1,6 +1,12 @@
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate, useLocation } from "react-router-dom";
 import { backgroundColors, colors } from "../../../Shared/constants";
+import { signInFormFields } from "../../../Shared/textConstants";
 import ButtonForm from "../../Common/ButtonForm";
+import DynamicForm from "../../Common/Form";
 import {
+  StyledErrorMessage,
   StyledForgetPasswordText,
   StyledFormContainer,
   StyledFormDescription,
@@ -8,8 +14,40 @@ import {
   StyledSeparationText,
   StyledTextContent,
 } from "./styles";
+import { RootState, AppDispatch } from "../../../redux/store/store";
+import { clearError } from "../../../redux/chunk/collections/auth/auth.slice";
+import { handleLogin } from "../../../services/loginServices";
 
-const SignIn = () => {
+interface SignInProps {
+  onClose: () => void;
+}
+
+const SignIn: React.FC<SignInProps> = ({ onClose }) => {
+  const dispatch = useDispatch<AppDispatch>();
+  const navigate = useNavigate();
+  const location = useLocation();
+  const { error } = useSelector((state: RootState) => state.authState);
+
+  const handleFormSubmit = async (data: { [key: string]: unknown }) => {
+    const { email, password } = data;
+    if (email && password) {
+      await handleLogin(
+        dispatch,
+        email as string,
+        password as string,
+        navigate,
+        location
+      );
+      onClose();
+    }
+  };
+
+  const handleClearError = () => {
+    if (error) {
+      dispatch(clearError());
+    }
+  };
+
   return (
     <StyledFormContainer>
       <StyledTextContent>
@@ -18,20 +56,19 @@ const SignIn = () => {
           To continue the order, please sign in
         </StyledFormDescription>
       </StyledTextContent>
-      <form>form</form>
-      <ButtonForm
-        text={"LOGIN"}
-        backgroundColor={backgroundColors.formButtonGrey}
-        borderColor={colors.secondary}
-        textColor={colors.secondary}
-      />
+
+      {error && <StyledErrorMessage>{error}</StyledErrorMessage>}
+
+      <DynamicForm fields={signInFormFields} onSubmit={handleFormSubmit} />
+
       <StyledForgetPasswordText>Forget password?</StyledForgetPasswordText>
       <StyledSeparationText>or</StyledSeparationText>
       <ButtonForm
-        text={"SIGN UP"}
+        text="SIGN UP"
         backgroundColor={backgroundColors.formButtonWhite}
         borderColor={colors.primary}
         textColor={colors.primary}
+        onClick={handleClearError}
       />
     </StyledFormContainer>
   );

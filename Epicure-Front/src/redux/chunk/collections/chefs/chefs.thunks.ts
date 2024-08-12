@@ -13,10 +13,6 @@ export const fetchChefs = createAsyncThunk<
     return response.data;
   } catch (error) {
     if (axios.isAxiosError(error)) {
-      console.log(
-        "Error fetching chefs:",
-        error.response?.data ?? error.message
-      );
       return rejectWithValue(error.response?.data ?? error.message);
     } else {
       return rejectWithValue("An unexpected error occurred");

@@ -16,7 +16,7 @@ export const backgroundColors: Record<string, string> = {
   secondary: "#FAFAFA",
   cards: "#F9F4EA",
   formButtonGrey: "#969696",
-  formButtonBlack: "#FAFAFA",
+  formButtonBlack: "#000000	",
   formButtonWhite: "white",
 };
 

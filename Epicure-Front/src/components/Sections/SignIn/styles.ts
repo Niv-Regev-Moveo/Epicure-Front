@@ -7,6 +7,13 @@ export const StyledFormContainer = styled.div`
   align-items: center;
   font-weight: 200;
   letter-spacing: ${letterSpacing.large};
+  height: 590px;
+  width: 100%;
+
+  @media (min-width: 600px) {
+    justify-content: center;
+    height: 582px;
+  }
 `;
 
 export const StyledTextContent = styled.div`
@@ -18,11 +25,18 @@ export const StyledFormTitle = styled.h3`
   text-align: center;
   font-weight: 200;
   letter-spacing: ${letterSpacing.big};
+  padding-top: 30px;
+
+  @media (min-width: 600px) {
+    padding-top: 0px;
+    font-size: ${fontSizes.xlLarge};
+    margin-top: 0px;
+  }
 `;
 
 export const StyledFormDescription = styled.p`
   text-align: center;
-  font-size: ${fontSizes.medium18};
+  font-size: ${fontSizes.medium16};
   letter-spacing: ${letterSpacing.large};
 `;
 
@@ -37,6 +51,7 @@ export const StyledSeparationText = styled.p`
   color: ${colors.separationText};
   text-align: center;
   width: 85%;
+  max-width: 292px;
 
   &::before,
   &::after {
@@ -45,4 +60,9 @@ export const StyledSeparationText = styled.p`
     border-bottom: 1px solid ${colors.separationText};
     margin: 0 8px;
   }
+`;
+
+export const StyledErrorMessage = styled.div`
+  color: red;
+  margin: 10px 0;
 `;

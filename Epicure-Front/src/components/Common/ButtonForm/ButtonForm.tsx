@@ -6,6 +6,8 @@ interface ButtonFormProps {
   backgroundColor?: string;
   borderColor?: string;
   textColor?: string;
+  type?: "button" | "submit" | "reset";
+  onClick?: () => void;
 }
 
 const ButtonForm: React.FC<ButtonFormProps> = ({
@@ -13,12 +15,16 @@ const ButtonForm: React.FC<ButtonFormProps> = ({
   backgroundColor,
   borderColor,
   textColor,
+  type = "button",
+  onClick,
 }) => {
   return (
     <StyledButton
-      backgroundColor={backgroundColor}
-      borderColor={borderColor}
-      textColor={textColor}
+      $backgroundColor={backgroundColor}
+      $borderColor={borderColor}
+      $textColor={textColor}
+      type={type}
+      onClick={onClick}
     >
       {text}
     </StyledButton>

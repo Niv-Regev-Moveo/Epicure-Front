@@ -45,13 +45,13 @@ const NavBar = () => {
                   <StyledTopNavBarBorder>
                     <NavBarLinkExtended
                       to={"/Restaurants"}
-                      isCurrentPage={isActiveLink("/Restaurants")}
+                      $isCurrentPage={isActiveLink("/Restaurants")}
                     >
                       Restaurants
                     </NavBarLinkExtended>
                     <NavBarLinkExtended
                       to={"/Chefs"}
-                      isCurrentPage={isActiveLink("/Chefs")}
+                      $isCurrentPage={isActiveLink("/Chefs")}
                     >
                       Chefs
                     </NavBarLinkExtended>
@@ -59,19 +59,19 @@ const NavBar = () => {
                   <StyledBottomNavBarBorder>
                     <NavBarLinkExtended
                       to={"/Contact-use"}
-                      isCurrentPage={isActiveLink("/Contact-use")}
+                      $isCurrentPage={isActiveLink("/Contact-use")}
                     >
                       Contact use
                     </NavBarLinkExtended>
                     <NavBarLinkExtended
                       to={"/Term-Of-Use"}
-                      isCurrentPage={isActiveLink("/Term-Of-Use")}
+                      $isCurrentPage={isActiveLink("/Term-Of-Use")}
                     >
                       Term Of Use
                     </NavBarLinkExtended>
                     <NavBarLinkExtended
                       to={"/Privacy-Policy"}
-                      isCurrentPage={isActiveLink("/Privacy-Policy")}
+                      $isCurrentPage={isActiveLink("/Privacy-Policy")}
                     >
                       Privacy Policy
                     </NavBarLinkExtended>
@@ -96,11 +96,11 @@ const NavBar = () => {
           <StyledEpicureLogoTitle />
           <NavBarLink
             to={"/Restaurants"}
-            isCurrentPage={isActiveLink("/Restaurants")}
+            $isCurrentPage={isActiveLink("/Restaurants")}
           >
             Restaurants
           </NavBarLink>
-          <NavBarLink to={"/Chefs"} isCurrentPage={isActiveLink("/Chefs")}>
+          <NavBarLink to={"/Chefs"} $isCurrentPage={isActiveLink("/Chefs")}>
             Chefs
           </NavBarLink>
         </>
