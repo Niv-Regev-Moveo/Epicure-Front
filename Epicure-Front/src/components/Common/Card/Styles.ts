@@ -7,11 +7,11 @@ import {
 } from "../../../Shared/constants";
 
 interface StyledCardContainerProps {
-  restaurantPageStyle?: boolean;
+  $restaurantPageStyle?: boolean;
 }
 
 interface StyledCardImgProps {
-  restaurantPageStyle?: boolean;
+  $restaurantPageStyle?: boolean;
 }
 
 export const StyledCardContainer = styled.div<StyledCardContainerProps>`
@@ -32,8 +32,8 @@ export const StyledCardContainer = styled.div<StyledCardContainerProps>`
     min-height: 404px;
   }
 
-  ${({ restaurantPageStyle }) =>
-    restaurantPageStyle &&
+  ${({ $restaurantPageStyle }) =>
+    $restaurantPageStyle &&
     css`
       width: 335px;
 
@@ -58,8 +58,8 @@ export const StyledCardImg = styled.img<StyledCardImgProps>`
     height: 236px;
   }
 
-  ${({ restaurantPageStyle }) =>
-    restaurantPageStyle &&
+  ${({ $restaurantPageStyle }) =>
+    $restaurantPageStyle &&
     css`
       @media (max-width: ${screenSizes.small}) {
         height: 207px;

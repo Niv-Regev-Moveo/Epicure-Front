@@ -24,12 +24,12 @@ const Card = <T extends JSX.IntrinsicAttributes>({
   restaurantPageStyle = false,
 }: CardProps<T>) => {
   return (
-    <StyledCardContainer restaurantPageStyle={restaurantPageStyle}>
+    <StyledCardContainer $restaurantPageStyle={restaurantPageStyle}>
       <StyledCardImgContainer>
         <StyledCardImg
           src={image}
           alt={title}
-          restaurantPageStyle={restaurantPageStyle}
+          $restaurantPageStyle={restaurantPageStyle}
         />
       </StyledCardImgContainer>
       <StyledCardNameChef>

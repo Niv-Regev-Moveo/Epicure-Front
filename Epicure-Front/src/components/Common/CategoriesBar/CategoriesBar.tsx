@@ -20,7 +20,7 @@ const CategoriesBar: React.FC<CategoriesProps> = ({ categories }) => {
         <StyledCategory
           key={index}
           onClick={() => handleCategoryClick(category)}
-          isSelected={selectedCategory === category}
+          $isSelected={selectedCategory === category}
         >
           {category}
         </StyledCategory>

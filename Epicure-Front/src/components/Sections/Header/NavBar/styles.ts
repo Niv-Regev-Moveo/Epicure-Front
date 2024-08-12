@@ -36,7 +36,7 @@ export const activeLinkStyle = css`
 `;
 
 interface NavBarLinkProps {
-  isCurrentPage: boolean;
+  $isCurrentPage: boolean;
 }
 
 export const NavBarLink = styled(NavLink)<NavBarLinkProps>`
@@ -49,7 +49,7 @@ export const NavBarLink = styled(NavLink)<NavBarLinkProps>`
     text-decoration: none;
     font-weight: 200;
     letter-spacing: ${letterSpacing.large};
-    ${(props) => props.isCurrentPage && activeLinkStyle};
+    ${(props) => props.$isCurrentPage && activeLinkStyle};
   }
   @media (min-width: ${screenSizes.large}) {
     display: block;
@@ -64,7 +64,7 @@ export const NavBarLinkExtended = styled(NavLink)<NavBarLinkProps>`
   padding-bottom: 15px;
   margin-bottom: 5px;
   cursor: pointer;
-  ${(props) => props.isCurrentPage && activeLinkStyle};
+  ${(props) => props.$isCurrentPage && activeLinkStyle};
 `;
 
 export const OpenHamburgerLinksButton = styled.button`

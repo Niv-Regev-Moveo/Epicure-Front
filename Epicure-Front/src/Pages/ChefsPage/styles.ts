@@ -15,7 +15,6 @@ export const StyledPageContainer = styled.div`
     justify-content: space-around;
   }
   @media (max-width: ${screenSizes.large}) {
-    gap: 40px;
     max-width: 87%;
     justify-content: center;
   }

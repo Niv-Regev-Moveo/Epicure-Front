@@ -128,6 +128,7 @@ export const StyledChefNameTitle = styled.h3`
   position: absolute;
   bottom: 0;
   width: 100%;
+
   height: 51px;
   background-color: rgba(255, 255, 255, 0.7);
   padding-top: 18px;

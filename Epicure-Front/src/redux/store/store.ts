@@ -4,6 +4,7 @@ import { restaurantsReducer } from "../chunk/collections/restaurants/restaurants
 import { dishesReducer } from "../chunk/collections/dishes/dishes.slice";
 import { chefOfTheWeekReducer } from "../chunk/collections/chefOfTheWeek/chefOfTheWeek.slice";
 import { searchReducer } from "../chunk/collections/search/search.slice";
+import { authReducer } from "../chunk/collections/auth/auth.slice";
 
 const store = configureStore({
   reducer: {
@@ -12,6 +13,7 @@ const store = configureStore({
     dishesState: dishesReducer,
     chefOfTheWeekState: chefOfTheWeekReducer,
     searchState: searchReducer,
+    authState: authReducer,
   },
 });
 
